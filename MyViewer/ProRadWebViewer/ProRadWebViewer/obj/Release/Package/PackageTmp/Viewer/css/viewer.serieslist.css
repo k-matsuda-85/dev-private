@@ -1,0 +1,153 @@
+﻿/* シリーズ一覧 */
+#SeriesList {
+    border-left: 1px solid #505050;
+    border-right: 1px solid #505050;
+    background-color: #535353;
+    margin: -160px 0px 0px 0px;
+    height: 160px;
+    position: relative;
+    overflow: auto;
+    -ms-touch-action: pan-y; /* IE10向け */
+}
+
+/* アイテム部(標準) */
+.SeriesList-Item {
+    position: relative;
+    float: left;
+    -ms-touch-action: none; /* IE10向け */
+}
+.SeriesList-Item-Content {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    margin: 5px 0px 0px 10px;
+}
+.SeriesList-Item-OFF {
+    background-image: url("../img/x1/SeriesItem_off.png?20150706a");
+    color: #ffffff;
+}
+.SeriesList-Item-ON {
+    background-image: url("../img/x1/SeriesItem_on.png?20150706a");
+    color: #E4490B;
+}
+.SeriesList-Item-Active {
+    background-image: url("../img/x1/SeriesItem_active.png?20150706a");
+    color: #E4490B;
+}
+.SeriesList-Item-NowLoading {
+    background-image: url("../img/x1/NowLoading.png?20150706a");
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    margin: 9px 0px 0px 28px;
+}
+.SeriesList-Item-Thumbnail {
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    margin: -64px 0px 0px 28px;
+}
+.SeriesList-Item-NumberOf {
+    width: 116px;
+    height: 15px;
+    margin: 5px 0px 0px 2px;
+    font-size: 80%;
+    text-align: center;
+    overflow: hidden;
+    cursor: default;
+}
+.SeriesList-Item-SeriesDescription {
+    width: 116px;
+    height: 24px;
+    line-height: 12px;
+    margin: 0px 0px 0px 2px;
+    font-size: 80%;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+    cursor: default;
+}
+.SeriesList-Item-SeriesNumber {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    max-width: 106px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 100%;
+    overflow: hidden;
+    cursor: default;
+}
+.SeriesList-Item-IsGSPS {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-color: #000000;
+    color: #ffff00;
+    font-size: 100%;
+    overflow: hidden;
+    cursor: default;
+}
+
+/* アイテム部(簡易) */
+.SeriesList-Item1-Content {
+    width: 64px;
+    height: 64px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.SeriesList-Item1-OFF {
+    border: 4px solid #7aa9bf;
+}
+.SeriesList-Item1-ON {
+    border: 4px solid #537c99;
+}
+.SeriesList-Item1-Active {
+    border: 4px solid #fffe00;
+}
+.SeriesList-Item1-NowLoading {
+    margin: 0px 0px 0px 0px;
+}
+.SeriesList-Item1-Thumbnail {
+    margin: -64px 0px 0px 0px;
+}
+.SeriesList-Item1-NumberOf,
+.SeriesList-Item1-SeriesDescription,
+.SeriesList-Item1-IsGSPS {
+    display: none;
+}
+.SeriesList-Item1-SeriesNumber {
+    top: 0px;
+    left: 0px;
+    max-width: 64px;
+}
+
+/* iPad向け */
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+    /*.SeriesList-Item-OFF {
+        background-image: url("../img/x2/SeriesItem_off.png?20150706a");
+    }
+
+    .SeriesList-Item-ON {
+        background-image: url("../img/x2/SeriesItem_on.png?20150706a");
+    }
+
+    .SeriesList-Item-Active {
+        background-image: url("../img/x2/SeriesItem_active.png?20150706a");
+    }
+
+    .SeriesList-Item-NowLoading {
+        background-image: url("../img/x2/NowLoading.png?20150706a");
+    }
+
+    .SeriesList-Item1-NowLoading {
+        background-image: url("../img/x2/NowLoading.png?20150706a");
+    }*/
+}

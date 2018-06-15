@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ProRadServiceLib" />
+  <xs:import schemaLocation="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="flag" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginResult" type="xs:int" />
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="flag" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Login2Result" type="xs:int" />
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsAdmin" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginUrl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginUrlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginUrlResult" type="xs:int" />
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserConfigResult" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModalityConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModalityConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetModalityConfigResult" type="xs:int" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q2:ArrayOfKeyValueOfstringArrayOfKeyValueOfstringstringty7Ep6D1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnnotationList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnnotationListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAnnotationListResult" type="xs:int" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="items" nillable="true" type="q3:ArrayOfAnnotationItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q4:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetUserConfigResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetUserPasswordResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckLoginID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LoginID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckLoginIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckLoginIDResult" type="xs:int" />
+        <xs:element minOccurs="0" name="used" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSaiban">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SaibanID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSaibanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSaibanResult" type="xs:int" />
+        <xs:element minOccurs="0" name="item" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMServerConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMServerConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMServerConfigResult" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q5:ArrayOfKeyValueOfstringTupleOfstringstringU6ho3Bhd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMServerConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q6:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMServerConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetMServerConfigResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMSystemConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMSystemConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMSystemConfigResult" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q7:ArrayOfKeyValueOfstringTupleOfstringstringU6ho3Bhd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMSystemConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q8:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMSystemConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetMSystemConfigResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMGroupResult" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="items" nillable="true" type="q9:ArrayOfMGroupItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="item" nillable="true" type="q10:MGroupItem" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="type" type="q11:DbActionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetMGroupResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMGroupConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMGroupConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMGroupConfigResult" type="xs:int" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q12:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMGroupConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q13:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMGroupConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetMGroupConfigResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMUserResult" type="xs:int" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="items" nillable="true" type="q14:ArrayOfMUserItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="item" nillable="true" type="q15:MUserItem" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="type" type="q16:DbActionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetMUserResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMUserConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMUserConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMUserConfigResult" type="xs:int" />
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q17:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMUserConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q18:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMUserConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetMUserConfigResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMStorage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMStorageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMStorageResult" type="xs:int" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="items" nillable="true" type="q19:ArrayOfMStorageItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMStorage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="item" nillable="true" type="q20:MStorageItem" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="type" type="q21:DbActionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMStorageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetMStorageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMModalityConfig_Modality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMModalityConfig_ModalityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMModalityConfig_ModalityResult" type="xs:int" />
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q22:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMModalityConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMModalityConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMModalityConfigResult" type="xs:int" />
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q23:ArrayOfKeyValueOfstringTupleOfstringstringU6ho3Bhd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMModalityConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+        <xs:element xmlns:q24="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q24:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMModalityConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetMModalityConfigResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMAnnotation_Modality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMAnnotation_ModalityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMAnnotation_ModalityResult" type="xs:int" />
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q25:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMAnnotation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMAnnotationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMAnnotationResult" type="xs:int" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="items" nillable="true" type="q26:ArrayOfAnnotationItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMAnnotation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="items" nillable="true" type="q27:ArrayOfAnnotationItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMAnnotationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetMAnnotationResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ToRSKeyString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="rskey" nillable="true" type="q28:RSKey" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ToRSKeyStringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ToRSKeyStringResult" type="xs:int" />
+        <xs:element minOccurs="0" name="rskeyString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RSKey2StudyKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rskey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RSKey2StudyKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RSKey2StudyKeyResult" type="xs:int" />
+        <xs:element minOccurs="0" name="patid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studykey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="prm" nillable="true" type="q29:FindParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudyList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="prm" nillable="true" type="q30:FindParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudyListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStudyListResult" type="xs:int" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="tags" nillable="true" type="q31:ArrayOfStudyTag" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudyList_Kako">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patientid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studykey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudyList_KakoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStudyList_KakoResult" type="xs:int" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="tags" nillable="true" type="q32:ArrayOfStudyTag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudyKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="prm" nillable="true" type="q33:FindParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudyKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStudyKeyResult" type="xs:int" />
+        <xs:element minOccurs="0" name="patientid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studykey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSeriesList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studykey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSeriesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSeriesListResult" type="xs:int" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="tags" nillable="true" type="q34:ArrayOfSeriesTag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serieskey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetImageListResult" type="xs:int" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="imTags" nillable="true" type="q35:ArrayOfImageTag" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="seTags" nillable="true" type="q36:ArrayOfSeriesTag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageList2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="imagekeys" nillable="true" type="q37:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageList2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetImageList2Result" type="xs:int" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="tags" nillable="true" type="q38:ArrayOfImageTag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelStudy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studykey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelStudyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DelStudyResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudyMemo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studykey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudyMemoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStudyMemoResult" type="xs:int" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="item" nillable="true" type="q39:StudyMemoItem" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudyMemoHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studykey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudyMemoHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStudyMemoHistoryResult" type="xs:int" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="items" nillable="true" type="q40:ArrayOfStudyMemoItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetStudyMemo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studykey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="item" nillable="true" type="q41:StudyMemoItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetStudyMemoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetStudyMemoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studykey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCommentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetCommentResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetKeyword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studykey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="item" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetKeywordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetKeywordResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThumbnail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serieskey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThumbnailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetThumbnailResult" type="xs:int" />
+        <xs:element minOccurs="0" name="thumb" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThumbnail2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imagekey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThumbnail2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetThumbnail2Result" type="xs:int" />
+        <xs:element minOccurs="0" name="thumb" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imagekey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="level" type="xs:int" />
+        <xs:element minOccurs="0" name="cx" type="xs:int" />
+        <xs:element minOccurs="0" name="cy" type="xs:int" />
+        <xs:element minOccurs="0" name="cw" type="xs:int" />
+        <xs:element minOccurs="0" name="ch" type="xs:int" />
+        <xs:element minOccurs="0" name="wc" type="xs:double" />
+        <xs:element minOccurs="0" name="ww" type="xs:double" />
+        <xs:element minOccurs="0" name="rot" type="xs:int" />
+        <xs:element minOccurs="0" name="flipX" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetImageResult" type="xs:int" />
+        <xs:element minOccurs="0" name="image" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImage2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imagekey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="level" type="xs:int" />
+        <xs:element minOccurs="0" name="cx" type="xs:int" />
+        <xs:element minOccurs="0" name="cy" type="xs:int" />
+        <xs:element minOccurs="0" name="cw" type="xs:int" />
+        <xs:element minOccurs="0" name="ch" type="xs:int" />
+        <xs:element minOccurs="0" name="wc" type="xs:double" />
+        <xs:element minOccurs="0" name="ww" type="xs:double" />
+        <xs:element minOccurs="0" name="rot" type="xs:int" />
+        <xs:element minOccurs="0" name="flipX" type="xs:int" />
+        <xs:element minOccurs="0" name="preview" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImage2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetImage2Result" type="xs:int" />
+        <xs:element minOccurs="0" name="image" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDicomTag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imagekey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="tags" nillable="true" type="q42:ArrayOfunsignedInt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDicomTagResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDicomTagResult" type="xs:int" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="items" nillable="true" type="q43:ArrayOfDicomTagItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDicomTagAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imagekey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDicomTagAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDicomTagAllResult" type="xs:int" />
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="items" nillable="true" type="q44:ArrayOfDicomTagItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imagekey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="p1" type="q45:Point" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="p2" type="q46:Point" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRoiResult" type="xs:int" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="roi" nillable="true" type="q47:RoiItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PutImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q48="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="trace" nillable="true" type="q48:ArrayOfstring" />
+        <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PutImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PutImageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrefetchImageList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serieskey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrefetchImageListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PrefetchImageListResult" type="xs:int" />
+        <xs:element xmlns:q49="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="keys" nillable="true" type="q49:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrefetchImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imagekey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrefetchImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PrefetchImageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imagekey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetImageInfoResult" type="xs:int" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="tag" nillable="true" type="q50:ImageTag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGspsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serieskey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGspsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetGspsListResult" type="xs:int" />
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/ProRadServiceLib" minOccurs="0" name="items" nillable="true" type="q51:ArrayOfGSPSItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGsps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="gspskey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGspsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetGspsResult" type="xs:int" />
+        <xs:element xmlns:q52="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="items" nillable="true" type="q52:ArrayOfKeyValueOfstringGSPSDataItemErSYGEoO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

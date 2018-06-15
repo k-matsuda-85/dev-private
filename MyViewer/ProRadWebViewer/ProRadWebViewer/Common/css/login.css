@@ -1,0 +1,171 @@
+﻿/* 全体 */
+* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+body {
+    font-family: "游ゴシック";
+    background-color: #202020;
+    background-image: url("../img/Myvewer_Back.png");
+    background-size: contain;
+    background-repeat:no-repeat;
+    overflow: hidden;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    -ms-touch-action: none; /* IE10向け */
+    -ms-content-zooming: none; /* IE10向け */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* webkit向け */
+}
+html {
+    overflow: hidden;
+}
+textarea,
+input,
+select {
+    font-family: "游ゴシック";
+}
+
+/* バージョン */
+#Version {
+    cursor: default;
+    position: absolute;
+    top: 382px;
+    left: 509px;
+    overflow: hidden;
+    white-space: pre;
+    color: #c4ddf4;
+}
+
+/* 入力部 */
+#LoginInput {
+    background-image: url("../img/Myvewer_Logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 700px;
+    height: 828px;
+    margin-left: -350px;
+    margin-top: -414px;
+    box-shadow: 4px 4px 4px Black;
+}
+#Logo{
+    position: absolute;
+    width: 200px;
+    height: 0px;
+    top: 0px;
+    left: 200px;
+    background-image:url(../img/ロゴ.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+
+}
+
+#LoginID {
+    position: absolute;
+    width: 350px;
+    height: 38px;
+    top: 327px;
+    left: 174px;
+}
+    #LoginID input {
+        width: 350px;
+        height: 30px;
+        line-height: 30px;
+        text-align:center;
+        outline-style: none;
+        border-radius: 10px 10px 10px 10px;
+        border-style:solid;
+        border-color:transparent;
+        background-color:transparent;
+        color:rgba(205,205, 205,1);
+    }
+    #LoginID input:focus {
+        border-color:transparent;
+        background-color:transparent;
+    }
+#Password {
+    position: absolute;
+    width: 350px;
+    height: 30px;
+    top: 422px;
+    left: 174px;
+}
+    #Password input {
+        width: 350px;
+        height: 30px;
+        text-align:center;
+        line-height: 30px;
+        outline-style: none;
+        border-radius: 10px 10px 10px 10px;
+        border-style:solid;
+        border-color:transparent;
+        background-color:transparent;
+        color:rgba(205,205, 205,1);
+    }
+    #Password input:focus {
+        border-color:transparent;
+        background-color:transparent;
+    }
+
+.Input-Focus {
+    border-bottom: #0053a8 2px solid;
+    border-left: #0053a8 2px solid;
+    border-top: #0053a8 2px solid;
+    border-right: #0053a8 2px solid;
+}
+#LoginButton {
+    background-size: 100%;
+    cursor: pointer;
+    border: 1px solid #62A7AC;
+    position: absolute;
+    width: 350px;
+    height: 30px;
+    top: 602px;
+    left: 174px;
+    background-color:#62A7AC;
+    border-radius: 10px 10px 10px 10px;
+}
+#LoginButton:active {
+    background-color:#3C9198;
+}
+    #LoginButton a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        outline-style: none;
+    }
+.LoginButton-OFF {
+    /*background-image: url("../img/x1/LoginButton_off.png?20150706a");*/
+}
+.LoginButton-Active {
+    /*background-image: url("../img/x1/LoginButton_active.png?20150706a");*/
+}
+.LoginButton-ON {
+    /*background-image: url("../img/x1/LoginButton_on.png?20150706a");*/
+}
+
+/* iPad向け */
+/*@media only screen and (-webkit-device-pixel-ratio: 2) {
+    body {
+        background-image: url("../img/x2/Login_back.png?20150706a");
+    }
+
+    #LoginInput {
+        background-image: url("../img/x2/LoginInput.png?20150706a");
+    }
+
+    .LoginButton-OFF {
+        background-image: url("../img/x2/LoginButton_off.png?20150706a");
+    }
+
+    .LoginButton-Active {
+        background-image: url("../img/x2/LoginButton_active.png?20150706a");
+    }
+
+    .LoginButton-ON {
+        background-image: url("../img/x2/LoginButton_on.png?20150706a");
+    }
+}*/

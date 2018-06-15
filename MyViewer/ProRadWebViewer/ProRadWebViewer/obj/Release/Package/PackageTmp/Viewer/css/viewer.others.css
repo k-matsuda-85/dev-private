@@ -1,0 +1,311 @@
+﻿/* 全体 */
+* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+body {
+    font-family: "游ゴシック";
+    background-color: rgba(80, 80, 80, 1);
+    overflow: hidden;
+    visibility: hidden;
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* webkit向け */
+}
+html {
+    overflow: hidden;
+    -ms-touch-action: none; /* IE10向け */
+    -ms-content-zooming: none; /* IE10向け */
+}
+input,
+select {
+    font-family: "游ゴシック";
+}
+textarea {
+    font-family: "游ゴシック";
+    font-size: 80%;
+    overflow: auto;
+    white-space: pre;
+    resize: none; /* Firefox向け */
+}
+
+/* Viewerライブラリ */
+#ViewerLib {
+    background-color: Black;
+    overflow: hidden;
+    position: relative;
+}
+.SeriesPanel {
+    border: solid 2px #7f7f7f;
+}
+.SeriesWorkPanel {
+    left: 0px;
+    height: 100%;
+    position: relative;
+    margin: 0px 16px 0px 0px;
+    padding: 0px;
+}
+.SopPanel {
+    border: solid 2px #7f7f7f;
+    margin: -1px 0px 0px -2px;
+}
+.SopDrawTextPanel {
+    color: White;
+}
+.SopPanel.Selected {
+    border: solid 2px #ffff00;
+    z-index: 1;
+}
+.CutlineActiveColor {
+    background-color: #ffff00;
+}
+.CutlineDefaultColor {
+    background-color: #ff8c00;
+}
+.ScrollBarPanel {
+    cursor: default;
+    background-color: Gray;
+    position: absolute;
+    width: 16px;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    padding: 0px;
+    overflow: hidden;
+    border-top: solid 1px #7f7f7f;
+    border-bottom: solid 1px #7f7f7f;
+    border-left: solid 1px #7f7f7f;
+    margin-top: -1px;
+}
+.ScrollBarUpPanel {
+    background-color: Gray;
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+    background-image: url("../img/x1/ScrollBar_up.png?20150706a");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 0px;
+}
+.ScrollBarBodyPanel {
+    background-color: Gray;
+    width: 100%;
+    top: 24px;
+    bottom: 24px;
+    overflow: hidden;
+    left: 0px;
+}
+.ScrollBarDownPanel {
+    background-color: Gray;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+    background-image: url("../img/x1/ScrollBar_down.png?20150706a");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 0px;
+}
+.ScrollBarBaseColor {
+    background-color: #a9a9a9;
+}
+.ScrollBarBaseColorThinOut {
+    background-color: #cccc99;
+}
+.ScrollBarOnCacheColor {
+    background-color: #333333;
+}
+.ScrollBarOnCacheColorThinOut {
+    background-color: #00479d;
+}
+.ScrollBarDispColor {
+    background-color: #E4490B;
+}
+.ScrollBarDispColorThinOut {
+    background-color: #E4490B;
+}
+.PRText {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    font-family: "游ゴシック";
+    color: #00ff00;
+}
+.PRLine {
+    width: 1px;
+    color: #00ff00;
+}
+.SeriesSyncPanel {
+    width: 24px;
+    height: 24px;
+    background-color: Black;
+    border: 1px solid white;
+    right: 20px;
+    top: 2px;
+    z-index: 2;
+    position: absolute;
+    cursor: default;
+}
+    .SeriesSyncPanel.On {
+        background-image: url("../img/x1/SeriesSync.png?20150706a");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+.AnnotationBase {
+    position: absolute;
+    width: 100%;
+    color: White;
+    cursor: default;
+}
+    .AnnotationBase div {
+        white-space: pre;
+        font-size: 80%;
+    }
+.AnnotationLU {
+    left: 3px;
+}
+.AnnotationRU {
+    text-align: right;
+    right: 3px;
+}
+.AnnotationLD {
+    bottom: 0px;
+    left: 3px;
+}
+.AnnotationRD {
+    text-align: right;
+    bottom: 0px;
+    right: 3px;
+}
+.SeriesLoading {
+    background-image: url("../img/x1/Loding.gif?20150706a");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    width: 160px;
+    height: 44px;
+    margin-left: -80px;
+    margin-top: -22px;
+}
+.SeriesTopCenterPanel {
+    position: absolute;
+    z-index: 2;
+    top: 2px;
+    width: 100%;
+    cursor: default;
+}
+.ThinOutPanel {
+    text-align: center;
+}
+    .ThinOutPanel span {
+        background-color: #00479d;
+        font-size: 90%;
+        color: #ff00ff;
+        padding: 5px 9px 3px 9px;
+        line-height: 24px;
+    }
+.SeriesSwapPanel {
+    position: absolute;
+    z-index: 2;
+    top: 2px;
+    left: 2px;
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    opacity: 0;
+    filter: Alpha(opacity=0);
+    cursor: move;
+}
+    .SeriesSwapPanel:hover {
+        opacity: 0.6;
+        filter: Alpha(opacity=60);
+    }
+
+/* 状態表示 */
+#WebStatus {
+    line-height: 19px;
+    white-space: pre;
+    overflow: hidden;
+    margin: 0px 0px 0px 20px;
+    color: #e8e8e8;
+}
+
+/* セパレータ(縦) */
+#Separator {
+    cursor: move;
+/*    background-image: url("../img/x1/Separator.png?20150706a");*/
+    width: 100%;
+    height: 7px;
+}
+
+/* 分割領域 */
+#ViewerCenter {
+    position: relative;
+}
+#ViewerRight {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #535353;
+}
+#ViewerFoot {
+    position: relative;
+}
+
+/* ドラッグ＆ドロップ */
+#DragDropItem {
+    cursor: default;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 64px;
+    height: 64px;
+    border: 2px dashed White;
+    z-index: 10;
+}
+
+/* レイヤー */
+#CommonLayer {
+    cursor: default;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+#CommonLayer-Opacity {
+    background-color: Black;
+    opacity: 0.6;
+    filter: Alpha(opacity=60);
+    width: 100%;
+    height: 100%;
+}
+
+/* iPad向け */
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+    /*.ScrollBarUpPanel {
+        background-image: url("../img/x2/ScrollBar_up.png?20150706a");
+    }
+
+    .ScrollBarDownPanel {
+        background-image: url("../img/x2/ScrollBar_down.png?20150706a");
+    }
+
+    .SeriesSyncPanel.On {
+        background-image: url("../img/x2/SeriesSync.png?20150706a");
+    }
+
+    .SeriesLoading {
+        background-image: url("../img/x2/Loding.gif?20150706a");
+    }
+
+    #Separator {
+        background-image: url("../img/x2/Separator.png?20150706a");
+    }*/
+}

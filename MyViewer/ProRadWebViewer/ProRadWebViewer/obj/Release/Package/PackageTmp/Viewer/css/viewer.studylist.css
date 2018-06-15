@@ -1,0 +1,276 @@
+﻿/* 検査一覧 */
+#StudyList {
+    width: 0px;
+    height: 160px;
+    position: relative;
+}
+#StudyList-View {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* ヘッダ部 */
+#StudyList-Head-Left {
+    border-left: 1px solid #505050;
+    border-bottom: 1px solid #505050;
+    background-color: #404040;
+    height: 24px;
+}
+.StudyList-Head-Center,
+#StudyList-Head-Right-Margin {
+    color: #e8e8e8;
+    cursor: default;
+    border-bottom: 1px solid #505050;
+    background-color: #404040;
+    vertical-align: bottom;
+    font-size: 95%;
+    height: 24px;
+}
+    .StudyList-Head-Center span {
+        font-size: 70%;
+        position: relative;
+        bottom: 2px;
+    }
+#StudyList-Head-Right {
+    border-bottom: 1px solid #505050;
+    background-color: #404040;
+    height: 24px;
+    width: 2px;
+}
+
+/* ボディ部 */
+#StudyList-Body {
+    font-size: 110%;
+    border-left: 1px solid #505050;
+    vertical-align: top;
+}
+.StudyList-Body-Left {
+    width: 6px;
+}
+.StudyList-Body-Left-Margin {
+    width: 2px;
+}
+.StudyList-Body-Showing,
+.StudyList-Body-StudyPassword,
+.StudyList-Body-Memo {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 75%;
+    width: 16px;
+}
+.StudyList-Body-StudyDate,
+.StudyList-Body-UploadDate {
+    white-space: pre;
+    width: 110px;
+    min-width: 90px;
+}
+.StudyList-Body-Modality {
+    white-space: pre;
+    width: 45px;
+    min-width: 40px;
+}
+.StudyList-Body-BodyPartExamined {
+    white-space: pre;
+    width: 110px;
+    min-width: 55px;
+}
+.StudyList-Body-NumberOfImages {
+    white-space: pre;
+    width: 60px;
+    min-width: 55px;
+}
+.StudyList-Body-AccessionNumber {
+    white-space: pre;
+    width: 110px;
+    min-width: 70px;
+}
+.StudyList-Body-StudyTime {
+    white-space: pre;
+    width: 95px;
+    min-width: 90px;
+}
+.StudyList-Body-StudyDescription {
+    white-space: pre;
+    width: 240px;
+    min-width: 70px;
+}
+.StudyList-Body-StudyDateTime,
+.StudyList-Body-UploadDateTime {
+    white-space: pre;
+    width: 180px;
+    min-width: 90px;
+}
+.StudyList-Body-Keyword {
+    white-space: pre;
+    width: 220px;
+    min-width: 55px;
+}
+.StudyList-Body-Comment {
+    white-space: pre;
+    width: 220px;
+    min-width: 55px;
+}
+.StudyList-Body-Right-Margin {
+    width: 20px;
+}
+#StudyList-Table {
+    width: 100%;
+    height: 136px;
+    overflow: auto;
+    overflow-x: hidden; /* IE用 */
+    -ms-touch-action: pan-y; /* IE10向け */
+}
+#StudyList-Table-View {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* アイテム部 */
+.StudyList-Table-Row-Select {
+    color: White;
+    background-color:#606060;
+}
+.StudyList-Item {
+    text-align: center;
+    cursor: default;
+    border-bottom: 1px solid #505050;
+    vertical-align: bottom;
+    overflow: hidden;
+    height: 28px;
+}
+    .StudyList-Item span {
+        white-space: nowrap;
+    }
+
+/* パネル部 */
+.StudyList-Panel {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    right: 3px;
+    top: 2px;
+    z-index: 2;
+    position: absolute;
+    cursor: default;
+}
+.StudyList-Icon-0 {
+    background-image: url("../img/x1/StudyIcon_1.png?20150706a");
+}
+.StudyList-Icon-1 {
+    background-image: url("../img/x1/StudyIcon_2.png?20150706a");
+}
+.StudyList-Icon-2 {
+    background-image: url("../img/x1/StudyIcon_3.png?20150706a");
+}
+.StudyList-Icon-3 {
+    background-image: url("../img/x1/StudyIcon_4.png?20150706a");
+}
+.StudyList-Icon-4 {
+    background-image: url("../img/x1/StudyIcon_5.png?20150706a");
+}
+.StudyList-Icon-5 {
+    background-image: url("../img/x1/StudyIcon_6.png?20150706a");
+}
+
+/* 検査パスワード */
+.StudyList-StudyPassword-Lock {
+    background-image: url("../img/x1/StudyPassword.png?20150706a");
+}
+
+/* メモ編集部 */
+.StudyList-Memo-OFF {
+    background-image: url("../img/x1/MemoIcon_off.png?20150706a");
+}
+.StudyList-Memo-ON {
+    background-image: url("../img/x1/MemoIcon_on.png?20150706a");
+}
+
+/* 検査パスワード(レイヤ) */
+#StudyList-Layer-StudyPassword {
+    background-color: #7aaac0;
+    border: 1px solid #505050;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    margin: -48px 0px 0px -120px;
+}
+#StudyList-Layer-StudyPassword-Head {
+    margin: 5px 5px 5px 5px;
+}
+#StudyList-Layer-StudyPassword-Head-Title {
+    font-size: 120%;
+}
+#StudyList-Layer-StudyPassword-Body {
+    margin: 5px 5px 5px 5px;
+}
+#StudyList-Layer-StudyPassword-Body-Input {
+    border: 1px solid #505050;
+    width: 224px;
+    font-size: 100%;
+    padding: 2px 2px 2px 2px;
+}
+#StudyList-Layer-StudyPassword-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#StudyList-Layer-StudyPassword-Foot-OK {
+    position: relative;
+    top: 0px;
+    left: 26px;
+    width: 80px;
+    height: 24px;
+}
+#StudyList-Layer-StudyPassword-Foot-Cancel {
+    position: relative;
+    top: 0px;
+    left: 126px;
+    width: 80px;
+    height: 24px;
+    margin: -24px 0px 0px 0px;
+}
+    #StudyList-Layer-StudyPassword-Foot-OK input,
+    #StudyList-Layer-StudyPassword-Foot-Cancel input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* iPad向け */
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+    /*.StudyList-Icon-0 {
+        background-image: url("../img/x2/StudyIcon_1.png?20150706a");
+    }
+
+    .StudyList-Icon-1 {
+        background-image: url("../img/x2/StudyIcon_2.png?20150706a");
+    }
+
+    .StudyList-Icon-2 {
+        background-image: url("../img/x2/StudyIcon_3.png?20150706a");
+    }
+
+    .StudyList-Icon-3 {
+        background-image: url("../img/x2/StudyIcon_4.png?20150706a");
+    }
+
+    .StudyList-Icon-4 {
+        background-image: url("../img/x2/StudyIcon_5.png?20150706a");
+    }
+
+    .StudyList-Icon-5 {
+        background-image: url("../img/x2/StudyIcon_6.png?20150706a");
+    }
+
+    .StudyList-StudyPassword-Lock {
+        background-image: url("../img/x2/StudyPassword.png?20150706a");
+    }
+
+    .StudyList-Memo-OFF {
+        background-image: url("../img/x2/MemoIcon_off.png?20150706a");
+    }
+
+    .StudyList-Memo-ON {
+        background-image: url("../img/x2/MemoIcon_on.png?20150706a");
+    }*/
+}

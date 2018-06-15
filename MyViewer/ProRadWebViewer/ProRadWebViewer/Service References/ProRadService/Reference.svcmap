@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1cbedb6d-e0b0-4187-9c0e-9b9d7a037b23" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OnPreService.disco" MetadataType="Disco" ID="77cacac0-e5d9-4707-a73d-35ffe35fa778" SourceId="1" SourceUrl="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?disco" />
+    <MetadataFile FileName="ProRadServices.wsdl" MetadataType="Wsdl" ID="ad092332-c955-4dd8-8888-eff1aaf55b9b" SourceId="1" SourceUrl="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?wsdl" />
+    <MetadataFile FileName="OnPreService.xsd" MetadataType="Schema" ID="ff09ddfe-4473-426b-9278-8494bcc802c6" SourceId="1" SourceUrl="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OnPreService1.xsd" MetadataType="Schema" ID="88e814a6-ad59-49a2-b234-1d7aa04b4df8" SourceId="1" SourceUrl="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OnPreService2.xsd" MetadataType="Schema" ID="adfb9712-719c-4c99-b380-b7cd802d0d82" SourceId="1" SourceUrl="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OnPreService3.xsd" MetadataType="Schema" ID="d2c3c39b-d383-4b09-813f-c1a1d2e2a254" SourceId="1" SourceUrl="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd5" />
+    <MetadataFile FileName="OnPreService4.xsd" MetadataType="Schema" ID="a7e3549d-9a47-4860-88dc-ca801345abd7" SourceId="1" SourceUrl="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd3" />
+    <MetadataFile FileName="OnPreService5.xsd" MetadataType="Schema" ID="804a11f3-a6c8-48d2-8b2f-2ecebb5b3cf6" SourceId="1" SourceUrl="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

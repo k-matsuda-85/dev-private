@@ -1,0 +1,868 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C36BCE9-65DD-49E7-B63E-87371992828A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProRadWebViewer</RootNamespace>
+    <AssemblyName>ProRadWebViewer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeApp_Data>true</ExcludeApp_Data>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CustomLog, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\CustomLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\CommonWebService.asmx" />
+    <Content Include="Common\css\Add\arrow_asc.png" />
+    <Content Include="Common\css\Add\arrow_desc.png" />
+    <Content Include="Common\css\Add\bootstrap-datepicker3.css" />
+    <Content Include="Common\css\Add\bootstrap-datepicker3.min.css" />
+    <Content Include="Common\css\Add\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Common\css\Add\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Common\css\Add\bootstrap-theme.css" />
+    <Content Include="Common\css\Add\bootstrap-theme.min.css" />
+    <Content Include="Common\css\Add\bootstrap.css" />
+    <Content Include="Common\css\Add\bootstrap.min.css" />
+    <Content Include="Common\css\Add\sticky-footer.css" />
+    <Content Include="Common\css\Add\style.css" />
+    <Content Include="Common\css\Add\typeahead.css" />
+    <Content Include="Common\css\portallogin.css" />
+    <Content Include="Common\img\Myvewer_Back.png" />
+    <Content Include="Common\img\Myvewer_Logo.png" />
+    <Content Include="Common\img\ロゴ.png" />
+    <Content Include="Common\js\Add\bootstrap.js" />
+    <Content Include="Common\js\Add\jquery-1.12.4.min.js" />
+    <Content Include="Common\js\common.config.js" />
+    <Content Include="Common\js\portallogin.window.js" />
+    <Content Include="Search\img\x1\Close_off.png" />
+    <Content Include="Search\img\x1\dummy_off.png" />
+    <Content Include="Search\img\x1\dummy_on.png" />
+    <Content Include="Search\img\x1\Loding.gif" />
+    <Content Include="Search\img\x1\Logout1_off.png" />
+    <Content Include="Search\img\x1\Logout2_off.png" />
+    <Content Include="Search\img\x1\NowLoading.png" />
+    <Content Include="Search\img\x1\PACS_off.png" />
+    <Content Include="Search\img\x1\PACS_on.png" />
+    <Content Include="Search\img\x1\ShortURL.png" />
+    <Content Include="Search\img\x1\OverlayA_Right.png" />
+    <Content Include="Search\img\x1\OverlayA_Left.png" />
+    <Content Include="Search\img\x1\Uploader_off.png" />
+    <Content Include="Search\img\x1\Option_off.png" />
+    <Content Include="Search\img\x1\Option_on.png" />
+    <Content Include="Search\img\x1\SeriesItem_off.png" />
+    <Content Include="Search\img\x1\StudyPassword.png" />
+    <Content Include="Search\img\x1\InputSubMenu.png" />
+    <Content Include="Search\img\x1\Help_off.png" />
+    <Content Include="Search\img\x1\HeadRight_up_off.png" />
+    <Content Include="Search\img\x1\HeadRight_up_on.png" />
+    <Content Include="Search\img\x1\HeadRight_down_off.png" />
+    <Content Include="Search\img\x1\HeadRight_down_on.png" />
+    <Content Include="Search\img\x1\Portal_off.png" />
+    <Content Include="Search\img\x1\Portal.png" />
+    <Content Include="Search\img\x1\MemoIcon_off.png" />
+    <Content Include="Search\img\x1\HeadRight.png" />
+    <Content Include="Search\img\x1\MenuInfo1.png" />
+    <Content Include="Search\img\x1\MenuInfo2.png" />
+    <Content Include="Search\img\x1\HeadLeft.png" />
+    <Content Include="Search\img\x1\Menu_off.png" />
+    <Content Include="Search\img\x1\Menu_on.png" />
+    <Content Include="Search\img\x1\MenuPreset.png" />
+    <Content Include="Search\img\x1\MenuReset.png" />
+    <Content Include="Search\img\x1\MenuSearch.png" />
+    <Content Include="Search\img\x1\HeadCenter.png" />
+    <Content Include="Search\img\x1\MenuBack1.png" />
+    <Content Include="Search\img\x1\MenuBack2.png" />
+    <Content Include="Search\img\x1\Separator.png" />
+    <Content Include="Search\img\x2\Close_off.png" />
+    <Content Include="Search\img\x2\dummy_off.png" />
+    <Content Include="Search\img\x2\dummy_on.png" />
+    <Content Include="Search\img\x2\Loding.gif" />
+    <Content Include="Search\img\x2\Logout1_off.png" />
+    <Content Include="Search\img\x2\Logout2_off.png" />
+    <Content Include="Search\img\x2\NowLoading.png" />
+    <Content Include="Search\img\x2\PACS_off.png" />
+    <Content Include="Search\img\x2\PACS_on.png" />
+    <Content Include="Search\img\x2\ShortURL.png" />
+    <Content Include="Search\img\x2\OverlayA_Right.png" />
+    <Content Include="Search\img\x2\OverlayA_Left.png" />
+    <Content Include="Search\img\x2\Uploader_off.png" />
+    <Content Include="Search\img\x2\Option_off.png" />
+    <Content Include="Search\img\x2\Option_on.png" />
+    <Content Include="Search\img\x2\SeriesItem_off.png" />
+    <Content Include="Search\img\x2\StudyPassword.png" />
+    <Content Include="Search\img\x2\InputSubMenu.png" />
+    <Content Include="Search\img\x2\Help_off.png" />
+    <Content Include="Search\img\x2\HeadRight_up_off.png" />
+    <Content Include="Search\img\x2\HeadRight_up_on.png" />
+    <Content Include="Search\img\x2\HeadRight_down_off.png" />
+    <Content Include="Search\img\x2\HeadRight_down_on.png" />
+    <Content Include="Search\img\x2\Portal_off.png" />
+    <Content Include="Search\img\x2\Portal.png" />
+    <Content Include="Search\img\x2\MemoIcon_off.png" />
+    <Content Include="Search\img\x2\HeadRight.png" />
+    <Content Include="Search\img\x2\MenuInfo1.png" />
+    <Content Include="Search\img\x2\MenuInfo2.png" />
+    <Content Include="Search\img\x2\HeadLeft.png" />
+    <Content Include="Search\img\x2\Menu_off.png" />
+    <Content Include="Search\img\x2\Menu_on.png" />
+    <Content Include="Search\img\x2\MenuPreset.png" />
+    <Content Include="Search\img\x2\MenuReset.png" />
+    <Content Include="Search\img\x2\MenuSearch.png" />
+    <Content Include="Search\img\x2\HeadCenter.png" />
+    <Content Include="Search\img\x2\MenuBack1.png" />
+    <Content Include="Search\img\x2\MenuBack2.png" />
+    <Content Include="Search\img\x2\Separator.png" />
+    <Content Include="Search\js\search.menu.command.js" />
+    <Content Include="Search\js\search.util.js" />
+    <Content Include="Search\js\search.config.js" />
+    <Content Include="Search\js\search.data.js" />
+    <Content Include="Search\SearchWebService.asmx" />
+    <Content Include="Common\css\Add\bootstrap-datepicker3.css.map" />
+    <Content Include="Common\css\Add\bootstrap-datepicker3.min.css.map" />
+    <Content Include="Common\css\Add\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="Common\css\Add\bootstrap-datepicker3.standalone.min.css.map" />
+    <Content Include="Common\css\Add\bootstrap-theme.css.map" />
+    <Content Include="Common\css\Add\bootstrap-theme.min.css.map" />
+    <Content Include="Common\css\Add\bootstrap.css.map" />
+    <Content Include="Common\css\Add\bootstrap.min.css.map" />
+    <Content Include="Common\css\Add\bootswatch.less" />
+    <Content Include="Common\css\Add\variables.less" />
+    <Content Include="Common\css\Add\_bootswatch.scss" />
+    <Content Include="Common\css\Add\_variables.scss" />
+    <None Include="Properties\PublishProfiles\プロファイル1.pubxml" />
+    <None Include="Service References\ProRadService\OnPreService.disco" />
+    <Content Include="Viewer\css\viewer.studymemo.css" />
+    <Content Include="Viewer\img\x1\icon.png" />
+    <Content Include="Viewer\img\x1\Loding.gif" />
+    <Content Include="Viewer\img\x1\NowLoading.png" />
+    <Content Include="Viewer\img\x1\Tool\Angle3_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Angle3_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Angle4_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Angle4_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Arrow_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Arrow_on.png" />
+    <Content Include="Viewer\img\x1\Tool\SeriesPC_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Circle_off.png" />
+    <Content Include="Viewer\img\x1\Tool\SeriesPC_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Circle_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Close_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Close_on.png" />
+    <Content Include="Viewer\img\x1\Tool\CTR_off.png" />
+    <Content Include="Viewer\img\x1\Tool\CTR_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Cutline_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Cutline_on.png" />
+    <Content Include="Viewer\img\x1\Tool\DicomTag_off.png" />
+    <Content Include="Viewer\img\x1\Tool\DicomTag_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Distance_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Distance_on.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipSeriesPrev_off.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipSeriesNext_off.png" />
+    <Content Include="Viewer\img\x1\Tool\dummy_off.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipSeriesPrev_on.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipSeriesNext_on.png" />
+    <Content Include="Viewer\img\x1\Tool\dummy_on.png" />
+    <Content Include="Viewer\img\x1\Tool\FreeLine_off.png" />
+    <Content Include="Viewer\img\x1\Tool\FreeLine_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Help_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Help_on.png" />
+    <Content Include="Viewer\img\x1\Tool\info_off.png" />
+    <Content Include="Viewer\img\x1\Tool\info_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI11_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI11_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI12_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI12_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI21_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI21_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI22_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI22_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI23_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI23_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI24_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutI24_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS11_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS11_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS12_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS12_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS21_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS21_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS22_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS22_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS23_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS23_on.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS24_off.png" />
+    <Content Include="Viewer\img\x1\Tool\LayoutS24_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Layout_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Layout_on.png" />
+    <Content Include="Viewer\img\x1\Tool\MCine_off.png" />
+    <Content Include="Viewer\img\x1\Tool\MCine_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_Angle3_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_Angle3_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_Angle4_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_Angle4_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_CTR_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_CTR_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_Distance_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_Distance_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_ROI_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_ROI_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_side_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Measure_side_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Pan_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Pan_on.png" />
+    <Content Include="Viewer\img\x1\Tool\ReportOutput_off.png" />
+    <Content Include="Viewer\img\x1\Tool\ReportOutput_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Report_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Report_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Reset_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Reset_on.png" />
+    <Content Include="Viewer\img\x1\Tool\ROI_off.png" />
+    <Content Include="Viewer\img\x1\Tool\ROI_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Rotate_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Rotate_on.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipBottom_off.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipBottom_on.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipImageNext_off.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipImageNext_on.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipImagePrev_off.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipImagePrev_on.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipMiddle_off.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipMiddle_on.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipTop_off.png" />
+    <Content Include="Viewer\img\x1\Tool\SkipTop_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Skip_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Skip_on.png" />
+    <Content Include="Viewer\img\x1\Tool\StudyMemo_off.png" />
+    <Content Include="Viewer\img\x1\Tool\StudyMemo_on.png" />
+    <Content Include="Viewer\img\x1\Tool\SyncIndex_off.png" />
+    <Content Include="Viewer\img\x1\Tool\SyncIndex_on.png" />
+    <Content Include="Viewer\img\x1\Tool\SyncPosition_off.png" />
+    <Content Include="Viewer\img\x1\Tool\SyncPosition_on.png" />
+    <Content Include="Viewer\img\x1\Tool\SyncThickness_off.png" />
+    <Content Include="Viewer\img\x1\Tool\SyncThickness_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Sync_Index_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Sync_Index_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Sync_Position_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Sync_Position_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Sync_side_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Sync_side_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Sync_Thickness_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Sync_Thickness_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Text_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Text_on.png" />
+    <Content Include="Viewer\img\x1\Tool\ThinOut_disabled_all_off.png" />
+    <Content Include="Viewer\img\x1\Tool\ThinOut_disabled_all_on.png" />
+    <Content Include="Viewer\img\x1\Tool\ThinOut_disabled_part_off.png" />
+    <Content Include="Viewer\img\x1\Tool\ThinOut_disabled_part_on.png" />
+    <Content Include="Viewer\img\x1\Tool\ThinOut_enabled_off.png" />
+    <Content Include="Viewer\img\x1\Tool\ThinOut_enabled_on.png" />
+    <Content Include="Viewer\img\x1\Tool\ThinOut_side_off.png" />
+    <Content Include="Viewer\img\x1\Tool\ThinOut_side_on.png" />
+    <Content Include="Viewer\img\x1\Tool\ToolAC_down_off.png" />
+    <Content Include="Viewer\img\x1\Tool\ToolAC_down_on.png" />
+    <Content Include="Viewer\img\x1\Tool\ToolAC_up_off.png" />
+    <Content Include="Viewer\img\x1\Tool\ToolAC_up_on.png" />
+    <Content Include="Viewer\img\x1\Tool\TopLink_off.png" />
+    <Content Include="Viewer\img\x1\Tool\TopLink_on.png" />
+    <Content Include="Viewer\img\x1\Tool\GSPS_off.png" />
+    <Content Include="Viewer\img\x1\Tool\WL_off.png" />
+    <Content Include="Viewer\img\x1\Tool\GSPS_on.png" />
+    <Content Include="Viewer\img\x1\Tool\WL_on.png" />
+    <Content Include="Viewer\img\x1\Tool\GSPS_side_off.png" />
+    <Content Include="Viewer\img\x1\Tool\WL_side_off.png" />
+    <Content Include="Viewer\img\x1\Tool\GSPS_side_on.png" />
+    <Content Include="Viewer\img\x1\Tool\WL_side_on.png" />
+    <Content Include="Viewer\img\x1\Tool\Zoom_off.png" />
+    <Content Include="Viewer\img\x1\Tool\Zoom_on.png" />
+    <Content Include="Viewer\img\x1\OverlayB_Right.png" />
+    <Content Include="Viewer\img\x1\OverlayB_Left.png" />
+    <Content Include="Viewer\img\x1\SeriesItem_off.png" />
+    <Content Include="Viewer\img\x1\SeriesItem_on.png" />
+    <Content Include="Viewer\img\x1\SeriesItem_active.png" />
+    <Content Include="Viewer\img\x1\ScrollBar_up.png" />
+    <Content Include="Viewer\img\x1\ScrollBar_down.png" />
+    <Content Include="Viewer\img\x1\StudyPassword.png" />
+    <Content Include="Viewer\img\x1\HeadRight_up_off.png" />
+    <Content Include="Viewer\img\x1\HeadRight_up_on.png" />
+    <Content Include="Viewer\img\x1\HeadRight_down_off.png" />
+    <Content Include="Viewer\img\x1\HeadRight_down_on.png" />
+    <Content Include="Viewer\img\x1\MemoClose_off.png" />
+    <Content Include="Viewer\img\x1\MemoClose_on.png" />
+    <Content Include="Viewer\img\x1\MemoIcon_off.png" />
+    <Content Include="Viewer\img\x1\MemoIcon_on.png" />
+    <Content Include="Viewer\img\x1\MemoCopy_off.png" />
+    <Content Include="Viewer\img\x1\MemoCopy_on.png" />
+    <Content Include="Viewer\img\x1\MemoDelete_off.png" />
+    <Content Include="Viewer\img\x1\MemoDelete_on.png" />
+    <Content Include="Viewer\img\x1\MemoCancel_off.png" />
+    <Content Include="Viewer\img\x1\MemoCancel_on.png" />
+    <Content Include="Viewer\img\x1\MemoHistory_off.png" />
+    <Content Include="Viewer\img\x1\MemoHistory_on.png" />
+    <Content Include="Viewer\img\x1\MemoBack_off.png" />
+    <Content Include="Viewer\img\x1\MemoBack_on.png" />
+    <Content Include="Viewer\img\x1\MemoRegister_off.png" />
+    <Content Include="Viewer\img\x1\MemoRegister_on.png" />
+    <Content Include="Viewer\img\x1\MemoEdit_off.png" />
+    <Content Include="Viewer\img\x1\MemoEdit_on.png" />
+    <Content Include="Viewer\img\x1\SeriesSync.png" />
+    <Content Include="Viewer\img\x1\StudyIcon_1.png" />
+    <Content Include="Viewer\img\x1\StudyIcon_2.png" />
+    <Content Include="Viewer\img\x1\StudyIcon_3.png" />
+    <Content Include="Viewer\img\x1\StudyIcon_4.png" />
+    <Content Include="Viewer\img\x1\StudyIcon_5.png" />
+    <Content Include="Viewer\img\x1\StudyIcon_6.png" />
+    <Content Include="Viewer\img\x1\HeadLeft.png" />
+    <Content Include="Viewer\img\x1\HeadCenter.png" />
+    <Content Include="Viewer\img\x1\MenuBack1.png" />
+    <Content Include="Viewer\img\x1\MenuBack2.png" />
+    <Content Include="Viewer\img\x1\Separator.png" />
+    <Content Include="Viewer\img\x2\Loding.gif" />
+    <Content Include="Viewer\img\x2\NowLoading.png" />
+    <Content Include="Viewer\img\x2\Tool\Angle3_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Angle3_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Angle4_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Angle4_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Arrow_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Arrow_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Circle_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Circle_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Close_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Close_on.png" />
+    <Content Include="Viewer\img\x2\Tool\CTR_off.png" />
+    <Content Include="Viewer\img\x2\Tool\CTR_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Cutline_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Cutline_on.png" />
+    <Content Include="Viewer\img\x2\Tool\DicomTag_off.png" />
+    <Content Include="Viewer\img\x2\Tool\DicomTag_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Distance_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Distance_on.png" />
+    <Content Include="Viewer\img\x2\Tool\dummy_off.png" />
+    <Content Include="Viewer\img\x2\Tool\dummy_on.png" />
+    <Content Include="Viewer\img\x2\Tool\FreeLine_off.png" />
+    <Content Include="Viewer\img\x2\Tool\FreeLine_on.png" />
+    <Content Include="Viewer\img\x2\Tool\GSPS_off.png" />
+    <Content Include="Viewer\img\x2\Tool\GSPS_on.png" />
+    <Content Include="Viewer\img\x2\Tool\GSPS_side_off.png" />
+    <Content Include="Viewer\img\x2\Tool\GSPS_side_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Help_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Help_on.png" />
+    <Content Include="Viewer\img\x2\Tool\info_off.png" />
+    <Content Include="Viewer\img\x2\Tool\info_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI11_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI11_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI12_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI12_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI21_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI21_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI22_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI22_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI23_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI23_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI24_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutI24_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS11_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS11_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS12_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS12_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS21_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS21_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS22_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS22_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS23_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS23_on.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS24_off.png" />
+    <Content Include="Viewer\img\x2\Tool\LayoutS24_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Layout_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Layout_on.png" />
+    <Content Include="Viewer\img\x2\Tool\MCine_off.png" />
+    <Content Include="Viewer\img\x2\Tool\MCine_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_Angle3_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_Angle3_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_Angle4_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_Angle4_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_CTR_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_CTR_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_Distance_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_Distance_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_ROI_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_ROI_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_side_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Measure_side_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Pan_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Pan_on.png" />
+    <Content Include="Viewer\img\x2\Tool\ReportOutput_off.png" />
+    <Content Include="Viewer\img\x2\Tool\ReportOutput_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Report_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Report_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Reset_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Reset_on.png" />
+    <Content Include="Viewer\img\x2\Tool\ROI_off.png" />
+    <Content Include="Viewer\img\x2\Tool\ROI_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Rotate_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Rotate_on.png" />
+    <Content Include="Viewer\img\x2\Tool\SeriesPC_off.png" />
+    <Content Include="Viewer\img\x2\Tool\SeriesPC_on.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipBottom_off.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipBottom_on.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipImageNext_off.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipImageNext_on.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipImagePrev_off.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipImagePrev_on.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipMiddle_off.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipMiddle_on.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipSeriesNext_off.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipSeriesNext_on.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipSeriesPrev_off.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipSeriesPrev_on.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipTop_off.png" />
+    <Content Include="Viewer\img\x2\Tool\SkipTop_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Skip_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Skip_on.png" />
+    <Content Include="Viewer\img\x2\Tool\StudyMemo_off.png" />
+    <Content Include="Viewer\img\x2\Tool\StudyMemo_on.png" />
+    <Content Include="Viewer\img\x2\Tool\SyncIndex_off.png" />
+    <Content Include="Viewer\img\x2\Tool\SyncIndex_on.png" />
+    <Content Include="Viewer\img\x2\Tool\SyncPosition_off.png" />
+    <Content Include="Viewer\img\x2\Tool\SyncPosition_on.png" />
+    <Content Include="Viewer\img\x2\Tool\SyncThickness_off.png" />
+    <Content Include="Viewer\img\x2\Tool\SyncThickness_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Sync_Index_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Sync_Index_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Sync_Position_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Sync_Position_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Sync_side_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Sync_side_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Sync_Thickness_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Sync_Thickness_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Text_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Text_on.png" />
+    <Content Include="Viewer\img\x2\Tool\ThinOut_disabled_all_off.png" />
+    <Content Include="Viewer\img\x2\Tool\ThinOut_disabled_all_on.png" />
+    <Content Include="Viewer\img\x2\Tool\ThinOut_disabled_part_off.png" />
+    <Content Include="Viewer\img\x2\Tool\ThinOut_disabled_part_on.png" />
+    <Content Include="Viewer\img\x2\Tool\ThinOut_enabled_off.png" />
+    <Content Include="Viewer\img\x2\Tool\ThinOut_enabled_on.png" />
+    <Content Include="Viewer\img\x2\Tool\ThinOut_side_off.png" />
+    <Content Include="Viewer\img\x2\Tool\ThinOut_side_on.png" />
+    <Content Include="Viewer\img\x2\Tool\ToolAC_down_off.png" />
+    <Content Include="Viewer\img\x2\Tool\ToolAC_down_on.png" />
+    <Content Include="Viewer\img\x2\Tool\ToolAC_up_off.png" />
+    <Content Include="Viewer\img\x2\Tool\ToolAC_up_on.png" />
+    <Content Include="Viewer\img\x2\Tool\TopLink_off.png" />
+    <Content Include="Viewer\img\x2\Tool\TopLink_on.png" />
+    <Content Include="Viewer\img\x2\Tool\WL_off.png" />
+    <Content Include="Viewer\img\x2\Tool\WL_on.png" />
+    <Content Include="Viewer\img\x2\Tool\WL_side_off.png" />
+    <Content Include="Viewer\img\x2\Tool\WL_side_on.png" />
+    <Content Include="Viewer\img\x2\Tool\Zoom_off.png" />
+    <Content Include="Viewer\img\x2\Tool\Zoom_on.png" />
+    <Content Include="Viewer\img\x2\OverlayB_Right.png" />
+    <Content Include="Viewer\img\x2\OverlayB_Left.png" />
+    <Content Include="Viewer\img\x2\SeriesItem_off.png" />
+    <Content Include="Viewer\img\x2\SeriesItem_on.png" />
+    <Content Include="Viewer\img\x2\SeriesItem_active.png" />
+    <Content Include="Viewer\img\x2\ScrollBar_up.png" />
+    <Content Include="Viewer\img\x2\ScrollBar_down.png" />
+    <Content Include="Viewer\img\x2\StudyPassword.png" />
+    <Content Include="Viewer\img\x2\HeadRight_up_off.png" />
+    <Content Include="Viewer\img\x2\HeadRight_up_on.png" />
+    <Content Include="Viewer\img\x2\HeadRight_down_off.png" />
+    <Content Include="Viewer\img\x2\HeadRight_down_on.png" />
+    <Content Include="Viewer\img\x2\MemoClose_off.png" />
+    <Content Include="Viewer\img\x2\MemoClose_on.png" />
+    <Content Include="Viewer\img\x2\MemoIcon_off.png" />
+    <Content Include="Viewer\img\x2\MemoIcon_on.png" />
+    <Content Include="Viewer\img\x2\MemoCopy_off.png" />
+    <Content Include="Viewer\img\x2\MemoCopy_on.png" />
+    <Content Include="Viewer\img\x2\MemoDelete_off.png" />
+    <Content Include="Viewer\img\x2\MemoDelete_on.png" />
+    <Content Include="Viewer\img\x2\MemoCancel_off.png" />
+    <Content Include="Viewer\img\x2\MemoCancel_on.png" />
+    <Content Include="Viewer\img\x2\MemoHistory_off.png" />
+    <Content Include="Viewer\img\x2\MemoHistory_on.png" />
+    <Content Include="Viewer\img\x2\MemoBack_off.png" />
+    <Content Include="Viewer\img\x2\MemoBack_on.png" />
+    <Content Include="Viewer\img\x2\MemoRegister_off.png" />
+    <Content Include="Viewer\img\x2\MemoRegister_on.png" />
+    <Content Include="Viewer\img\x2\MemoEdit_off.png" />
+    <Content Include="Viewer\img\x2\MemoEdit_on.png" />
+    <Content Include="Viewer\img\x2\SeriesSync.png" />
+    <Content Include="Viewer\img\x2\StudyIcon_1.png" />
+    <Content Include="Viewer\img\x2\StudyIcon_2.png" />
+    <Content Include="Viewer\img\x2\StudyIcon_3.png" />
+    <Content Include="Viewer\img\x2\StudyIcon_4.png" />
+    <Content Include="Viewer\img\x2\StudyIcon_5.png" />
+    <Content Include="Viewer\img\x2\StudyIcon_6.png" />
+    <Content Include="Viewer\img\x2\HeadLeft.png" />
+    <Content Include="Viewer\img\x2\HeadCenter.png" />
+    <Content Include="Viewer\img\x2\MenuBack1.png" />
+    <Content Include="Viewer\img\x2\MenuBack2.png" />
+    <Content Include="Viewer\img\x2\Separator.png" />
+    <Content Include="Viewer\js\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Viewer\js\bootstrap-datepicker.min.js" />
+    <Content Include="Viewer\js\Tool\tool.angle.js" />
+    <Content Include="Viewer\js\Tool\tool.annotation.js" />
+    <Content Include="Viewer\js\Tool\tool.arrow.js" />
+    <Content Include="Viewer\js\Tool\tool.circle.js" />
+    <Content Include="Viewer\js\Tool\tool.ctanalyze.js" />
+    <Content Include="Viewer\js\Tool\tool.ctrmeasure.js" />
+    <Content Include="Viewer\js\Tool\tool.cutline.js" />
+    <Content Include="Viewer\js\Tool\tool.seriespanelchange.js" />
+    <Content Include="Viewer\js\Tool\tool.dicomtag.js" />
+    <Content Include="Viewer\js\Tool\tool.distance.js" />
+    <Content Include="Viewer\js\Tool\tool.exit.js" />
+    <Content Include="Viewer\js\Tool\tool.freeline.js" />
+    <Content Include="Viewer\js\Tool\tool.skipseries.js" />
+    <Content Include="Viewer\js\Tool\tool.help.js" />
+    <Content Include="Viewer\js\Tool\tool.key.js" />
+    <Content Include="Viewer\js\Tool\tool.manualcine.js" />
+    <Content Include="Viewer\js\Tool\tool.measure.js" />
+    <Content Include="Viewer\js\Tool\tool.menu.js" />
+    <Content Include="Viewer\js\Tool\tool.move.js" />
+    <Content Include="Viewer\js\Tool\tool.report.js" />
+    <Content Include="Viewer\js\Tool\tool.reset.js" />
+    <Content Include="Viewer\js\Tool\tool.rotate.js" />
+    <Content Include="Viewer\js\Tool\tool.scale.js" />
+    <Content Include="Viewer\js\Tool\tool.seriessync.js" />
+    <Content Include="Viewer\js\Tool\tool.skipimage.js" />
+    <Content Include="Viewer\js\Tool\tool.split.js" />
+    <Content Include="Viewer\js\Tool\tool.studymemo.js" />
+    <Content Include="Viewer\js\Tool\tool.text.js" />
+    <Content Include="Viewer\js\Tool\tool.thinout.js" />
+    <Content Include="Viewer\js\Tool\tool.toolareachange.js" />
+    <Content Include="Viewer\js\Tool\tool.toplink.js" />
+    <Content Include="Viewer\js\Tool\tool.gsps.js" />
+    <Content Include="Viewer\js\Tool\tool.windowlevel.js" />
+    <Content Include="Viewer\js\viewer.util.js" />
+    <Content Include="Viewer\js\viewer.config.js" />
+    <Content Include="Viewer\js\viewer.data.js" />
+    <Content Include="Viewer\js\viewer.studymemo.js" />
+    <Content Include="Viewer\ViewerWebService.asmx" />
+    <Content Include="Core\js\excanvas.js" />
+    <None Include="Service References\ProRadService\OnPreService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProRadService\OnPreService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProRadService\OnPreService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProRadService\OnPreService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProRadService\OnPreService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProRadService\OnPreService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProRadService\ProRadServices.wsdl" />
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.FindParam.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.GSPSDataItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.GSPSItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.MGroupItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.MStorageItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.MUserItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.StudyMemoItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="WebPortalLogin.aspx" />
+    <Content Include="WebSearchReq.aspx" />
+    <Content Include="WebViewerReq.aspx" />
+    <None Include="Core\js\jquery-1.7.2.js" />
+    <Content Include="Core\js\jquery-1.7.2.min.js" />
+    <Content Include="Core\js\jquery.mousewheel.min.js" />
+    <Content Include="Viewer\css\dicomtag.css" />
+    <Content Include="Viewer\js\dicomtag.window.js" />
+    <Content Include="Viewer\GetImage.aspx" />
+    <Content Include="Viewer\GetThumbnail.aspx" />
+    <Content Include="Common\css\login%28シンプル%29.css" />
+    <Content Include="Common\img\favicon.ico" />
+    <Content Include="Common\js\login.window.js" />
+    <Content Include="Common\css\option.css" />
+    <Content Include="Common\js\login.load.js" />
+    <Content Include="Common\js\login.load%28シンプル%29.js" />
+    <Content Include="Common\js\option.window.js" />
+    <Content Include="Common\css\login.css" />
+    <Content Include="Search\css\search.searchmenu.css" />
+    <Content Include="Search\css\search.searchmenu%28シンプル%29.css" />
+    <Content Include="Search\js\search.load.js" />
+    <Content Include="Search\js\search.menu.js" />
+    <Content Include="Search\js\search.menu.input.js" />
+    <Content Include="Search\js\search.menu.preset.js" />
+    <Content Include="Viewer\css\viewer.toolarea%28シンプル%29.css" />
+    <Content Include="Search\js\search.load%28シンプル%29.js" />
+    <Content Include="Viewer\js\viewer.load.js" />
+    <Content Include="Viewer\js\viewer.load%28シンプル%29.js" />
+    <Content Include="Viewer\WebDicomTag.aspx" />
+    <None Include="Version.txt" />
+    <Content Include="Viewer\js\Ctrl\map.js" />
+    <Content Include="Viewer\js\Ctrl\viewer.js" />
+    <Content Include="Viewer\js\Ctrl\viewerctrl.js" />
+    <Content Include="Viewer\js\Ctrl\viewerseries.js" />
+    <Content Include="Viewer\js\Ctrl\viewersop.js" />
+    <Content Include="WebLogin.aspx" />
+    <Content Include="Search\css\search.others.css" />
+    <Content Include="Search\css\search.serieslist.css" />
+    <Content Include="Search\css\search.studylist.css" />
+    <Content Include="Search\js\search.studylist.js" />
+    <Content Include="Search\js\search.serieslist.js" />
+    <Content Include="Viewer\css\viewer.toolarea.css" />
+    <Content Include="Viewer\css\viewer.patientinfo.css" />
+    <Content Include="Viewer\css\viewer.studylist.css" />
+    <Content Include="Viewer\css\viewer.serieslist.css" />
+    <Content Include="Viewer\css\viewer.others.css" />
+    <Content Include="Viewer\css\viewer.css" />
+    <Content Include="Viewer\js\viewer.toolarea.js" />
+    <Content Include="Viewer\js\viewer.patientinfo.js" />
+    <Content Include="Viewer\js\viewer.window.js" />
+    <Content Include="Viewer\js\viewer.studylist.js" />
+    <Content Include="Viewer\js\viewer.serieslist.js" />
+    <Content Include="WebOption.aspx" />
+    <Content Include="Viewer\WebViewer.aspx" />
+    <Content Include="Common\js\common.util.js" />
+    <None Include="Core\js\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Search\css\search.css" />
+    <Content Include="Search\js\search.window.js" />
+    <Content Include="Search\WebSearch.aspx" />
+    <None Include="Service References\ProRadService\configuration91.svcinfo" />
+    <None Include="Service References\ProRadService\configuration.svcinfo" />
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.AnnotationItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.DicomTagItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.ImageTag.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.RoiItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.SeriesTag.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\ProRadWebViewer.ProRadService.StudyTag.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProRadService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonWebServiceProc.cs" />
+    <Compile Include="Common\CommonWebService.asmx.cs">
+      <DependentUpon>CommonWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Search\SearchWebService.asmx.cs">
+      <DependentUpon>SearchWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\ViewerWebService.asmx.cs">
+      <DependentUpon>ViewerWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Viewer\GetImage.aspx.cs">
+      <DependentUpon>GetImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer\GetImage.aspx.designer.cs">
+      <DependentUpon>GetImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\GetThumbnail.aspx.cs">
+      <DependentUpon>GetThumbnail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer\GetThumbnail.aspx.designer.cs">
+      <DependentUpon>GetThumbnail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebOption.aspx.cs">
+      <DependentUpon>WebOption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebOption.aspx.designer.cs">
+      <DependentUpon>WebOption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\WebViewer.aspx.cs">
+      <DependentUpon>WebViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer\WebViewer.aspx.designer.cs">
+      <DependentUpon>WebViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\WebSearch.aspx.cs">
+      <DependentUpon>WebSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\WebSearch.aspx.designer.cs">
+      <DependentUpon>WebSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProRadService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WebLogin.aspx.cs">
+      <DependentUpon>WebLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebLogin.aspx.designer.cs">
+      <DependentUpon>WebLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\WebDicomTag.aspx.cs">
+      <DependentUpon>WebDicomTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer\WebDicomTag.aspx.designer.cs">
+      <DependentUpon>WebDicomTag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPortalLogin.aspx.cs">
+      <DependentUpon>WebPortalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPortalLogin.aspx.designer.cs">
+      <DependentUpon>WebPortalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebSearchReq.aspx.cs">
+      <DependentUpon>WebSearchReq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebSearchReq.aspx.designer.cs">
+      <DependentUpon>WebSearchReq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebViewerReq.aspx.cs">
+      <DependentUpon>WebViewerReq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebViewerReq.aspx.designer.cs">
+      <DependentUpon>WebViewerReq.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ProRadService\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50523</DevelopmentServerPort>
+          <DevelopmentServerVPath>/ProRadNadia/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

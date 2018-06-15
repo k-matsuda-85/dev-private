@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProRadServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ProRadServices_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ProRadServiceLib" />
+      <xsd:import schemaLocation="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ProRadServices_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_Login2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login2" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_Login2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Login2Response" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_LoginUrl_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUrl" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_LoginUrl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetUserConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetUserConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetModalityConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModalityConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetModalityConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModalityConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetAnnotationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnotationList" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetAnnotationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnotationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetUserConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetUserConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_CheckLoginID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLoginID" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_CheckLoginID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLoginIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetSaiban_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaiban" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetSaiban_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaibanResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMServerConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMServerConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMServerConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMServerConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMServerConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMServerConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMServerConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMServerConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMSystemConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMSystemConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMSystemConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMSystemConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMSystemConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMSystemConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMSystemConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMSystemConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMGroup" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMGroup" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMGroupConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMGroupConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMGroupConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMGroupConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMGroupConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMGroupConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMGroupConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMGroupConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMUser" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMUser" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMUserConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMUserConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMUserConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMUserConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMUserConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMUserConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMUserConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMUserConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMStorage" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMStorage" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMModalityConfig_Modality_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMModalityConfig_Modality" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMModalityConfig_Modality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMModalityConfig_ModalityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMModalityConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMModalityConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMModalityConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMModalityConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMModalityConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMModalityConfig" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMModalityConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMModalityConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMAnnotation_Modality_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMAnnotation_Modality" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMAnnotation_Modality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMAnnotation_ModalityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMAnnotation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMAnnotation" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetMAnnotation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMAnnotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMAnnotation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMAnnotation" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetMAnnotation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMAnnotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_ToRSKeyString_InputMessage">
+    <wsdl:part name="parameters" element="tns:ToRSKeyString" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_ToRSKeyString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ToRSKeyStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_RSKey2StudyKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:RSKey2StudyKey" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_RSKey2StudyKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RSKey2StudyKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetStudyList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudyList" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetStudyList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetStudyList_Kako_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudyList_Kako" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetStudyList_Kako_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudyList_KakoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetStudyKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudyKey" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetStudyKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudyKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetSeriesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSeriesList" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetSeriesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSeriesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetImageList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageList" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetImageList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetImageList2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageList2" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetImageList2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageList2Response" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_DelStudy_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelStudy" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_DelStudy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelStudyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetStudyMemo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudyMemo" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetStudyMemo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudyMemoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetStudyMemoHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudyMemoHistory" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetStudyMemoHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudyMemoHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetStudyMemo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStudyMemo" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetStudyMemo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStudyMemoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetComment" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetKeyword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetKeyword" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_SetKeyword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetKeywordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetThumbnail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetThumbnail" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetThumbnail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetThumbnailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetThumbnail2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetThumbnail2" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetThumbnail2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetThumbnail2Response" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImage" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetImage2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImage2" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetImage2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImage2Response" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetDicomTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDicomTag" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetDicomTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDicomTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetDicomTagAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDicomTagAll" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetDicomTagAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDicomTagAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetRoi_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoi" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetRoi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_PutImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutImage" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_PutImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_PrefetchImageList_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrefetchImageList" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_PrefetchImageList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrefetchImageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_PrefetchImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrefetchImage" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_PrefetchImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrefetchImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetImageInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageInfo" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetImageInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetGspsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGspsList" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetGspsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGspsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetGsps_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGsps" />
+  </wsdl:message>
+  <wsdl:message name="ProRadServices_GetGsps_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGspsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ProRadServices">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/Login" message="tns:ProRadServices_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/LoginResponse" message="tns:ProRadServices_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/Login2" message="tns:ProRadServices_Login2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/Login2Response" message="tns:ProRadServices_Login2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUrl">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/LoginUrl" message="tns:ProRadServices_LoginUrl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/LoginUrlResponse" message="tns:ProRadServices_LoginUrl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetUserConfig" message="tns:ProRadServices_GetUserConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetUserConfigResponse" message="tns:ProRadServices_GetUserConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModalityConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetModalityConfig" message="tns:ProRadServices_GetModalityConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetModalityConfigResponse" message="tns:ProRadServices_GetModalityConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnotationList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetAnnotationList" message="tns:ProRadServices_GetAnnotationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetAnnotationListResponse" message="tns:ProRadServices_GetAnnotationList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetUserConfig" message="tns:ProRadServices_SetUserConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetUserConfigResponse" message="tns:ProRadServices_SetUserConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetUserPassword" message="tns:ProRadServices_SetUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetUserPasswordResponse" message="tns:ProRadServices_SetUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckLoginID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/CheckLoginID" message="tns:ProRadServices_CheckLoginID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/CheckLoginIDResponse" message="tns:ProRadServices_CheckLoginID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaiban">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetSaiban" message="tns:ProRadServices_GetSaiban_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetSaibanResponse" message="tns:ProRadServices_GetSaiban_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMServerConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetMServerConfig" message="tns:ProRadServices_GetMServerConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetMServerConfigResponse" message="tns:ProRadServices_GetMServerConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMServerConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetMServerConfig" message="tns:ProRadServices_SetMServerConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetMServerConfigResponse" message="tns:ProRadServices_SetMServerConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMSystemConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetMSystemConfig" message="tns:ProRadServices_GetMSystemConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetMSystemConfigResponse" message="tns:ProRadServices_GetMSystemConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMSystemConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetMSystemConfig" message="tns:ProRadServices_SetMSystemConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetMSystemConfigResponse" message="tns:ProRadServices_SetMSystemConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetMGroup" message="tns:ProRadServices_GetMGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetMGroupResponse" message="tns:ProRadServices_GetMGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetMGroup" message="tns:ProRadServices_SetMGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetMGroupResponse" message="tns:ProRadServices_SetMGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMGroupConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetMGroupConfig" message="tns:ProRadServices_GetMGroupConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetMGroupConfigResponse" message="tns:ProRadServices_GetMGroupConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMGroupConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetMGroupConfig" message="tns:ProRadServices_SetMGroupConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetMGroupConfigResponse" message="tns:ProRadServices_SetMGroupConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetMUser" message="tns:ProRadServices_GetMUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetMUserResponse" message="tns:ProRadServices_GetMUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetMUser" message="tns:ProRadServices_SetMUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetMUserResponse" message="tns:ProRadServices_SetMUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMUserConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetMUserConfig" message="tns:ProRadServices_GetMUserConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetMUserConfigResponse" message="tns:ProRadServices_GetMUserConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMUserConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetMUserConfig" message="tns:ProRadServices_SetMUserConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetMUserConfigResponse" message="tns:ProRadServices_SetMUserConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetMStorage" message="tns:ProRadServices_GetMStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetMStorageResponse" message="tns:ProRadServices_GetMStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetMStorage" message="tns:ProRadServices_SetMStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetMStorageResponse" message="tns:ProRadServices_SetMStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMModalityConfig_Modality">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetMModalityConfig_Modality" message="tns:ProRadServices_GetMModalityConfig_Modality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetMModalityConfig_ModalityResponse" message="tns:ProRadServices_GetMModalityConfig_Modality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMModalityConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetMModalityConfig" message="tns:ProRadServices_GetMModalityConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetMModalityConfigResponse" message="tns:ProRadServices_GetMModalityConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMModalityConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetMModalityConfig" message="tns:ProRadServices_SetMModalityConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetMModalityConfigResponse" message="tns:ProRadServices_SetMModalityConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMAnnotation_Modality">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetMAnnotation_Modality" message="tns:ProRadServices_GetMAnnotation_Modality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetMAnnotation_ModalityResponse" message="tns:ProRadServices_GetMAnnotation_Modality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMAnnotation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetMAnnotation" message="tns:ProRadServices_GetMAnnotation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetMAnnotationResponse" message="tns:ProRadServices_GetMAnnotation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMAnnotation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetMAnnotation" message="tns:ProRadServices_SetMAnnotation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetMAnnotationResponse" message="tns:ProRadServices_SetMAnnotation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ToRSKeyString">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/ToRSKeyString" message="tns:ProRadServices_ToRSKeyString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/ToRSKeyStringResponse" message="tns:ProRadServices_ToRSKeyString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RSKey2StudyKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/RSKey2StudyKey" message="tns:ProRadServices_RSKey2StudyKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/RSKey2StudyKeyResponse" message="tns:ProRadServices_RSKey2StudyKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetStudyList" message="tns:ProRadServices_GetStudyList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetStudyListResponse" message="tns:ProRadServices_GetStudyList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyList_Kako">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetStudyList_Kako" message="tns:ProRadServices_GetStudyList_Kako_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetStudyList_KakoResponse" message="tns:ProRadServices_GetStudyList_Kako_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetStudyKey" message="tns:ProRadServices_GetStudyKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetStudyKeyResponse" message="tns:ProRadServices_GetStudyKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeriesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetSeriesList" message="tns:ProRadServices_GetSeriesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetSeriesListResponse" message="tns:ProRadServices_GetSeriesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetImageList" message="tns:ProRadServices_GetImageList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetImageListResponse" message="tns:ProRadServices_GetImageList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageList2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetImageList2" message="tns:ProRadServices_GetImageList2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetImageList2Response" message="tns:ProRadServices_GetImageList2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelStudy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/DelStudy" message="tns:ProRadServices_DelStudy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/DelStudyResponse" message="tns:ProRadServices_DelStudy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyMemo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetStudyMemo" message="tns:ProRadServices_GetStudyMemo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetStudyMemoResponse" message="tns:ProRadServices_GetStudyMemo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyMemoHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetStudyMemoHistory" message="tns:ProRadServices_GetStudyMemoHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetStudyMemoHistoryResponse" message="tns:ProRadServices_GetStudyMemoHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStudyMemo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetStudyMemo" message="tns:ProRadServices_SetStudyMemo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetStudyMemoResponse" message="tns:ProRadServices_SetStudyMemo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetComment" message="tns:ProRadServices_SetComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetCommentResponse" message="tns:ProRadServices_SetComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetKeyword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/SetKeyword" message="tns:ProRadServices_SetKeyword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/SetKeywordResponse" message="tns:ProRadServices_SetKeyword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetThumbnail" message="tns:ProRadServices_GetThumbnail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetThumbnailResponse" message="tns:ProRadServices_GetThumbnail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnail2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetThumbnail2" message="tns:ProRadServices_GetThumbnail2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetThumbnail2Response" message="tns:ProRadServices_GetThumbnail2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetImage" message="tns:ProRadServices_GetImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetImageResponse" message="tns:ProRadServices_GetImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImage2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetImage2" message="tns:ProRadServices_GetImage2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetImage2Response" message="tns:ProRadServices_GetImage2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDicomTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetDicomTag" message="tns:ProRadServices_GetDicomTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetDicomTagResponse" message="tns:ProRadServices_GetDicomTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDicomTagAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetDicomTagAll" message="tns:ProRadServices_GetDicomTagAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetDicomTagAllResponse" message="tns:ProRadServices_GetDicomTagAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetRoi" message="tns:ProRadServices_GetRoi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetRoiResponse" message="tns:ProRadServices_GetRoi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/PutImage" message="tns:ProRadServices_PutImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/PutImageResponse" message="tns:ProRadServices_PutImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrefetchImageList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/PrefetchImageList" message="tns:ProRadServices_PrefetchImageList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/PrefetchImageListResponse" message="tns:ProRadServices_PrefetchImageList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrefetchImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/PrefetchImage" message="tns:ProRadServices_PrefetchImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/PrefetchImageResponse" message="tns:ProRadServices_PrefetchImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetImageInfo" message="tns:ProRadServices_GetImageInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetImageInfoResponse" message="tns:ProRadServices_GetImageInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGspsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetGspsList" message="tns:ProRadServices_GetGspsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetGspsListResponse" message="tns:ProRadServices_GetGspsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGsps">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProRadServices/GetGsps" message="tns:ProRadServices_GetGsps_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProRadServices/GetGspsResponse" message="tns:ProRadServices_GetGsps_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ProRadServices" type="tns:ProRadServices">
+    <wsp:PolicyReference URI="#NetTcpBinding_ProRadServices_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login2">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/Login2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUrl">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/LoginUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetUserConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModalityConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetModalityConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnotationList">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetAnnotationList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetUserConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPassword">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetUserPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLoginID">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/CheckLoginID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaiban">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetSaiban" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMServerConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetMServerConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMServerConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetMServerConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMSystemConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetMSystemConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMSystemConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetMSystemConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMGroup">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetMGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMGroup">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetMGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMGroupConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetMGroupConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMGroupConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetMGroupConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMUser">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetMUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMUser">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetMUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMUserConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetMUserConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMUserConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetMUserConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMStorage">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetMStorage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMStorage">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetMStorage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMModalityConfig_Modality">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetMModalityConfig_Modality" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMModalityConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetMModalityConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMModalityConfig">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetMModalityConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMAnnotation_Modality">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetMAnnotation_Modality" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMAnnotation">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetMAnnotation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMAnnotation">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetMAnnotation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ToRSKeyString">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/ToRSKeyString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RSKey2StudyKey">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/RSKey2StudyKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyList">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetStudyList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyList_Kako">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetStudyList_Kako" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyKey">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetStudyKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeriesList">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetSeriesList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageList">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetImageList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageList2">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetImageList2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelStudy">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/DelStudy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyMemo">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetStudyMemo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyMemoHistory">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetStudyMemoHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetStudyMemo">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetStudyMemo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetComment">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetKeyword">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/SetKeyword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnail">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetThumbnail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnail2">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetThumbnail2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImage2">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetImage2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDicomTag">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetDicomTag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDicomTagAll">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetDicomTagAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoi">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetRoi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutImage">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/PutImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrefetchImageList">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/PrefetchImageList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrefetchImage">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/PrefetchImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageInfo">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetImageInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGspsList">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetGspsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGsps">
+      <soap12:operation soapAction="http://tempuri.org/ProRadServices/GetGsps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProRadServices">
+    <wsdl:port name="NetTcpBinding_ProRadServices" binding="tns:NetTcpBinding_ProRadServices">
+      <soap12:address location="net.tcp://vm005:809/ProRadServiceOnPre/OnPreService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://vm005:809/ProRadServiceOnPre/OnPreService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1586 @@
+﻿/* ツール領域 */
+#ToolArea {
+    /*background-image: url("../img/x1/MenuBack1.png?20150706a");*/
+    position: relative;
+    width: 100%;
+    height: 66px;
+}
+
+#ToolArea-View {
+    height: 48px;
+    overflow: hidden;
+    margin: 7px 0px 0px 0px;
+    position: absolute;
+    left: 0px;
+}
+
+#ToolArea-View-Overlay-Left {
+    cursor: pointer;
+    overflow: hidden;
+    margin: 7px 0px 0px 0px;
+    position: absolute;
+    left: 0px;
+    background-image: url("../img/x1/OverlayB_Left.png?20150706a");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 48px;
+    display: none;
+}
+
+#ToolArea-View-Overlay-Right {
+    cursor: pointer;
+    overflow: hidden;
+    margin: 7px 0px 0px 0px;
+    position: absolute;
+    left: 0px;
+    background-image: url("../img/x1/OverlayB_Right.png?20150706a");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 48px;
+    display: none;
+}
+
+/* 共通 */
+.Tool-Common-SizeA {
+  /*  background-size: 100%;*/
+    background-repeat: no-repeat;
+    float: left;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    background-color:#505050;
+}
+
+.Tool-Common-SizeB {
+/*    background-size: 100%;*/
+    background-repeat: no-repeat;
+    float: left;
+    cursor: pointer;
+    width: 32px;
+    height: 48px;
+}
+
+.Tool-Common-SizeB span{
+    color:rgba(154, 154, 154, 1);
+    text-align:center;
+    line-height:55px;
+}
+
+.Tool-Common-SizeC {
+/*    background-size: 100%;*/
+    background-repeat: no-repeat;
+    float: left;
+    cursor: pointer;
+    width: 120px;
+    height: 48px;
+}
+.Tool-Common-SizeD {
+/*    background-size: 100%;*/
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 120px;
+    height: 24px;
+    background-color:#505050;
+    color:white;
+}
+.Tool-Separator {
+    width: 8px;
+    height: 48px;
+    float: left;
+}
+
+.Tool-Dummy {
+    background-image: url("../img/x1/Tool/dummy_off.png?20150706a");
+}
+
+/* ウィンドウレベル */
+.Tool-WindowLevel-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -165px -80px; opacity:1;
+}
+
+.Tool-WindowLevel-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -165px -128px; opacity:1;
+}
+
+.Tool-WindowLevel-Side-OFF {
+}
+
+.Tool-WindowLevel-Side-ON {
+}
+
+#Tool-WindowLevel-Side-Sub {
+    background-color: #444444;
+    border-top: 1.5px solid #555555;
+    border-left: 1.5px solid #555555;
+    border-bottom: 1.5px solid #555555;
+    border-right: 1.5px solid #555555;
+    padding: 0px 1px 1px 0px;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: 0px;
+    left: 0px;
+}
+
+.Tool-WindowLevel-Side-Sub-Item {
+    color: white;
+    cursor: pointer;
+    padding: 4px 12px 2px 11px;
+    white-space: pre;
+}
+
+    .Tool-WindowLevel-Side-Sub-Item:hover {
+        background-color: #505050;
+        color:#E4490B;
+    }
+
+.Tool-WindowLevel-Side-Sub-Item-ON {
+    background-color: #72a3b9;
+}
+
+    .Tool-WindowLevel-Side-Sub-Item-ON:hover {
+        background-color: #72a3b9;
+    }
+
+.Tool-WindowLevel-Side-Sub-Separator {
+    background-color: #7a8c99;
+    margin: 3px 6px 3px 6px;
+    height: 1px;
+    overflow: hidden;
+    display: none;
+}
+
+/* 拡大・縮小 */
+.Tool-Scale-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -15px -80px; opacity:1;
+}
+
+.Tool-Scale-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -15px -128px;
+}
+
+/* 移動 */
+.Tool-Move-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -90px -80px; opacity:1;
+}
+
+.Tool-Move-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -90px -128px;
+}
+
+/* 距離計測 */
+.Tool-Distance-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -240px -80px;
+}
+
+.Tool-Distance-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -240px -128px;
+}
+
+/* CT値測定 */
+.Tool-CTAnalyze-OFF {
+    background-image: url("../img/x1/Tool/ROI_off.png?20150706a");
+}
+
+.Tool-CTAnalyze-ON {
+    background-image: url("../img/x1/Tool/ROI_on.png?20150706a");
+}
+
+/* 角度計測(3点) */
+.Tool-Angle3-OFF {
+    background-image: url("../img/x1/Tool/Angle3_off.png?20150706a");
+}
+
+.Tool-Angle3-ON {
+    background-image: url("../img/x1/Tool/Angle3_on.png?20150706a");
+}
+
+/* 角度計測(4点) */
+.Tool-Angle4-OFF {
+    background-image: url("../img/x1/Tool/Angle4_off.png?20150706a");
+}
+
+.Tool-Angle4-ON {
+    background-image: url("../img/x1/Tool/Angle4_on.png?20150706a");
+}
+
+/* CTR計測 */
+.Tool-CTRMeasure-OFF {
+    background-image: url("../img/x1/Tool/CTR_off.png?20150706a");
+}
+
+.Tool-CTRMeasure-ON {
+    background-image: url("../img/x1/Tool/CTR_on.png?20150706a");
+}
+
+/* 計測 */
+.Tool-Measure-Side-OFF {
+    /*background-image: url("../img/x1/Tool/Measure_side_off.png?20150706a");*/
+}
+
+.Tool-Measure-Side-ON {
+    /*background-image: url("../img/x1/Tool/Measure_side_on.png?20150706a");*/
+}
+
+#Tool-Measure-Side-Sub {
+    width: 240px;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: 0px;
+    left: 0px;
+}
+/* 計測(距離計測) */
+.Tool-Measure-Distance-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -240px -80px;
+}
+
+.Tool-Measure-Distance-Side-Sub-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -240px -80px;
+}
+
+.Tool-Measure-Distance-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -240px -128px;
+}
+
+.Tool-Measure-Distance-Side-Sub-ON {
+    background-image: url("../img/x1/Tool/Distance_on.png?20150706a");
+}
+/* 計測(CT値測定) */
+.Tool-Measure-CTAnalyze-OFF {
+    background-image: url("../img/x1/Tool/Measure_ROI_off.png?20150706a");
+}
+
+.Tool-Measure-CTAnalyze-Side-Sub-OFF {
+    background-image: url("../img/x1/Tool/ROI_off.png?20150706a");
+}
+
+.Tool-Measure-CTAnalyze-ON {
+    background-image: url("../img/x1/Tool/Measure_ROI_on.png?20150706a");
+}
+
+.Tool-Measure-CTAnalyze-Side-Sub-ON {
+    background-image: url("../img/x1/Tool/ROI_on.png?20150706a");
+}
+/* 計測(角度計測(3点)) */
+.Tool-Measure-Angle3-OFF {
+    background-image: url("../img/x1/Tool/Measure_Angle3_off.png?20150706a");
+}
+
+.Tool-Measure-Angle3-Side-Sub-OFF {
+    background-image: url("../img/x1/Tool/Angle3_off.png?20150706a");
+}
+
+.Tool-Measure-Angle3-ON {
+    background-image: url("../img/x1/Tool/Measure_Angle3_on.png?20150706a");
+}
+
+.Tool-Measure-Angle3-Side-Sub-ON {
+    background-image: url("../img/x1/Tool/Angle3_on.png?20150706a");
+}
+/* 計測(角度計測(4点)) */
+.Tool-Measure-Angle4-OFF {
+    background-image: url("../img/x1/Tool/Measure_Angle4_off.png?20150706a");
+}
+
+.Tool-Measure-Angle4-Side-Sub-OFF {
+    background-image: url("../img/x1/Tool/Angle4_off.png?20150706a");
+}
+
+.Tool-Measure-Angle4-ON {
+    background-image: url("../img/x1/Tool/Measure_Angle4_on.png?20150706a");
+}
+
+.Tool-Measure-Angle4-Side-Sub-ON {
+    background-image: url("../img/x1/Tool/Angle4_on.png?20150706a");
+}
+/* 計測(CTR計測) */
+.Tool-Measure-CTRMeasure-OFF {
+    background-image: url("../img/x1/Tool/Measure_CTR_off.png?20150706a");
+}
+
+.Tool-Measure-CTRMeasure-Side-Sub-OFF {
+    background-image: url("../img/x1/Tool/CTR_off.png?20150706a");
+}
+
+.Tool-Measure-CTRMeasure-ON {
+    background-image: url("../img/x1/Tool/Measure_CTR_on.png?20150706a");
+}
+
+.Tool-Measure-CTRMeasure-Side-Sub-ON {
+    background-image: url("../img/x1/Tool/CTR_on.png?20150706a");
+}
+
+/* 矢印 */
+.Tool-Arrow-OFF {
+    background-image: url("../img/x1/Tool/Arrow_off.png?20150706a");
+}
+
+.Tool-Arrow-ON {
+    background-image: url("../img/x1/Tool/Arrow_on.png?20150706a");
+}
+
+/* 円 */
+.Tool-Circle-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -1510px -80px; opacity:1;
+}
+
+.Tool-Circle-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -1510px -128px; opacity:1;
+}
+
+/* 自由曲線 */
+.Tool-FreeLine-OFF {
+    background-image: url("../img/x1/Tool/FreeLine_off.png?20150706a");
+}
+
+.Tool-FreeLine-ON {
+    background-image: url("../img/x1/Tool/FreeLine_on.png?20150706a");
+}
+
+/* テキスト */
+.Tool-Text-OFF {
+    background-image: url("../img/x1/Tool/Text_off.png?20150706a");
+}
+
+.Tool-Text-ON {
+    background-image: url("../img/x1/Tool/Text_on.png?20150706a");
+}
+
+/* 全リセット */
+.Tool-Reset-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position:-315px -80px;
+}
+
+.Tool-Reset-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position:-315px -128px;
+}
+
+/* 分割 */
+.Tool-Split-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -765px -80px; opacity:1;
+}
+
+.Tool-Split-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -765px -128px;
+}
+
+#Tool-Split-Sub {
+    width: auto;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: 0px;
+    left: 0px;
+}
+
+#Tool-Split-Sub-Image {
+    clear: left;
+}
+
+.Tool-Split-Sub-Series-11-OFF {
+    background-image: url("../img/x1/Tool/LayoutS11_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Series-11-ON {
+    background-image: url("../img/x1/Tool/LayoutS11_on.png?20150706a");
+}
+
+.Tool-Split-Sub-Series-12-OFF {
+    background-image: url("../img/x1/Tool/LayoutS12_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Series-12-ON {
+    background-image: url("../img/x1/Tool/LayoutS12_on.png?20150706a");
+}
+
+.Tool-Split-Sub-Series-21-OFF {
+    background-image: url("../img/x1/Tool/LayoutS21_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Series-21-ON {
+    background-image: url("../img/x1/Tool/LayoutS21_on.png?20150706a");
+}
+
+.Tool-Split-Sub-Series-22-OFF {
+    background-image: url("../img/x1/Tool/LayoutS22_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Series-22-ON {
+    background-image: url("../img/x1/Tool/LayoutS22_on.png?20150706a");
+}
+
+.Tool-Split-Sub-Series-23-OFF {
+    background-image: url("../img/x1/Tool/LayoutS23_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Series-23-ON {
+    background-image: url("../img/x1/Tool/LayoutS23_on.png?20150706a");
+}
+
+.Tool-Split-Sub-Series-24-OFF {
+    background-image: url("../img/x1/Tool/LayoutS24_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Series-24-ON {
+    background-image: url("../img/x1/Tool/LayoutS24_on.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-11-OFF {
+    background-image: url("../img/x1/Tool/LayoutI11_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-11-ON {
+    background-image: url("../img/x1/Tool/LayoutI11_on.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-12-OFF {
+    background-image: url("../img/x1/Tool/LayoutI12_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-12-ON {
+    background-image: url("../img/x1/Tool/LayoutI12_on.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-21-OFF {
+    background-image: url("../img/x1/Tool/LayoutI21_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-21-ON {
+    background-image: url("../img/x1/Tool/LayoutI21_on.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-22-OFF {
+    background-image: url("../img/x1/Tool/LayoutI22_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-22-ON {
+    background-image: url("../img/x1/Tool/LayoutI22_on.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-23-OFF {
+    background-image: url("../img/x1/Tool/LayoutI23_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-23-ON {
+    background-image: url("../img/x1/Tool/LayoutI23_on.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-24-OFF {
+    background-image: url("../img/x1/Tool/LayoutI24_off.png?20150706a");
+}
+
+.Tool-Split-Sub-Image-24-ON {
+    background-image: url("../img/x1/Tool/LayoutI24_on.png?20150706a");
+}
+
+/* カットライン */
+.Tool-Cutline-OFF {
+    background-position: -1065px -80px; opacity:1;
+    background-image: url("../img/x1/icon.png");
+}
+
+.Tool-Cutline-ON {
+    background-position: -1065px -128px;
+    background-image: url("../img/x1/icon.png");
+}
+
+/* シリーズ一括同期 */
+.Tool-SeriesSync-Side-OFF {
+    color:rgba(160, 160, 160, 1);
+    line-height:50px;
+    text-align:center;
+}
+
+.Tool-SeriesSync-Side-ON {
+    color:rgba(22, 171, 203, 1);
+    line-height:50px;
+    text-align:center;
+}
+
+#Tool-SeriesSync-Side-Sub {
+    width: 144px;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: 0px;
+    left: 0px;
+    background-color;#404040;
+}
+
+.Tool-SeriesSync-Index-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -1290px -80px; opacity:1;
+}
+
+.Tool-SeriesSync-Side-Sub-Index-OFF {
+    background-image: url("../img/x1/icon.png");
+   background-position: -1290px -80px; opacity:1;
+
+}
+
+.Tool-SeriesSync-Index-ON {
+    background-image: url("../img/x1/icon.png");
+   background-position: -1290px -128px;
+}
+
+.Tool-SeriesSync-Side-Sub-Index-ON {
+    background-image: url("../img/x1/icon.png");
+   background-position: -1290px -128px;
+}
+
+.Tool-SeriesSync-Position-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -1440px -80px; opacity:1;
+}
+
+.Tool-SeriesSync-Side-Sub-Position-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -1440px -80px; opacity:1;
+    background-color;#404040;
+}
+
+.Tool-SeriesSync-Position-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -1440px -128px;
+}
+
+.Tool-SeriesSync-Side-Sub-Position-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -1440px -128px;
+}
+
+.Tool-SeriesSync-Thickness-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -1365px -80px; opacity:1;
+}
+
+.Tool-SeriesSync-Side-Sub-Thickness-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -1365px -80px; opacity:1;
+}
+
+.Tool-SeriesSync-Thickness-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -1365px -128px;
+}
+
+.Tool-SeriesSync-Side-Sub-Thickness-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -1365px -128px;
+}
+
+/* マニュアルシネ */
+.Tool-ManualCine-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -840px -80px; opacity:1;
+}
+
+.Tool-ManualCine-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -840px -128px;
+}
+
+/* 画像送り(前へ) */
+.Tool-SkipImagePrev-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -465px -80px; opacity:1;
+}
+
+.Tool-SkipImagePrev-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -465px -128px;
+}
+
+/* 画像送り(次へ) */
+.Tool-SkipImageNext-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -540px -80px; opacity:1;
+}
+
+.Tool-SkipImageNext-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -540px -128px;
+}
+
+/* 画像スキップ */
+.Tool-SkipImage-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: -615px -80px; opacity:1;
+}
+
+.Tool-SkipImage-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: -65px -128px;
+}
+
+#Tool-SkipImage-Sub {
+    width: 144px;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: 0px;
+    left: 0px;
+}
+
+.Tool-SkipImage-Sub-Top-OFF {
+    background-image: url("../img/x1/Tool/SkipTop_off.png?20150706a");
+}
+
+.Tool-SkipImage-Sub-Top-ON {
+    background-image: url("../img/x1/Tool/SkipTop_on.png?20150706a");
+}
+
+.Tool-SkipImage-Sub-Middle-OFF {
+    background-image: url("../img/x1/Tool/SkipMiddle_off.png?20150706a");
+}
+
+.Tool-SkipImage-Sub-Middle-ON {
+    background-image: url("../img/x1/Tool/SkipMiddle_on.png?20150706a");
+}
+
+.Tool-SkipImage-Sub-Bottom-OFF {
+    background-image: url("../img/x1/Tool/SkipBottom_off.png?20150706a");
+}
+
+.Tool-SkipImage-Sub-Bottom-ON {
+    background-image: url("../img/x1/Tool/SkipBottom_on.png?20150706a");
+}
+
+/* シリーズ送り(前へ) */
+.Tool-SkipSeriesPrev-OFF {
+    background-image: url("../img/x1/Tool/SkipSeriesPrev_off.png?20150706a");
+}
+
+.Tool-SkipSeriesPrev-ON {
+    background-image: url("../img/x1/Tool/SkipSeriesPrev_on.png?20150706a");
+}
+
+/* シリーズ送り(次へ) */
+.Tool-SkipSeriesNext-OFF {
+    background-image: url("../img/x1/Tool/SkipSeriesNext_off.png?20150706a");
+}
+
+.Tool-SkipSeriesNext-ON {
+    background-image: url("../img/x1/Tool/SkipSeriesNext_on.png?20150706a");
+}
+
+/* 回転 */
+.Tool-Rotate-OFF {
+        background-image: url("../img/x1/icon.png");
+        background-position: -1140px -80px;
+}
+
+.Tool-Rotate-ON {
+        background-image: url("../img/x1/icon.png");
+        background-position: -1140px -128px;
+}
+
+#Tool-Rotate-Sub {
+    background-color: #444444;
+    border-top: 1.5px solid #555555;
+    border-left: 1.5px solid #555555;
+    border-bottom: 1.5px solid #555555;
+    border-right: 1.5px solid #555555;
+    padding: 0px 1px 1px 0px;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: 0px;
+    left: 0px;
+    color:white;
+}
+
+.Tool-Rotate-Sub-Item {
+    color: white;
+    cursor: pointer;
+    padding: 4px 12px 2px 11px;
+    white-space: pre;
+}
+
+    .Tool-Rotate-Sub-Item:hover {
+        background-color: #505050;
+        color:#E4490B;
+    }
+
+.Tool-Rotate-Sub-Item-ON {
+    background-color: #72a3b9;
+}
+
+    .Tool-Rotate-Sub-Item-ON:hover {
+        background-color: #72a3b9;
+    }
+
+.Tool-Rotate-Sub-Separator {
+    background-color: #7a8c99;
+    margin: 3px 6px 3px 6px;
+    height: 1px;
+    overflow: hidden;
+    display: none;
+}
+
+/* アノテーション */
+    .Tool-Annotation-OFF {
+        background-image: url("../img/x1/icon.png");
+        background-position: -690px -80px;
+    }
+
+    .Tool-Annotation-ON {
+        background-image: url("../img/x1/icon.png");
+        background-position: -690px -128px;
+    }
+
+/* ヘルプ */
+.Tool-Help-OFF {
+    background-image: url("../img/x1/Tool/Help_off.png?20150706a");
+}
+
+.Tool-Help-ON {
+    background-image: url("../img/x1/Tool/Help_on.png?20150706a");
+}
+
+/* 終了 */
+.Tool-Exit-OFF {
+    background-image: url("../img/x1/icon.png");
+    background-position: 0 6px; opacity:1;
+}
+
+.Tool-Exit-ON {
+    background-image: url("../img/x1/icon.png");
+    background-position: 0 -38px;
+}
+
+/* ツール位置変更 */
+.Tool-ToolAreaChange-Top-OFF {
+    background-image: url("../img/x1/Tool/ToolAC_down_off.png?20150706a");
+}
+
+.Tool-ToolAreaChange-Top-ON {
+    background-image: url("../img/x1/Tool/ToolAC_down_on.png?20150706a");
+}
+
+.Tool-ToolAreaChange-Bottom-OFF {
+    background-image: url("../img/x1/Tool/ToolAC_up_off.png?20150706a");
+}
+
+.Tool-ToolAreaChange-Bottom-ON {
+    background-image: url("../img/x1/Tool/ToolAC_up_on.png?20150706a");
+}
+
+/* シリーズ表示変更 */
+.Tool-SeriesPanelChange-OFF {
+    background-image: url("../img/x1/Tool/SeriesPC_off.png?20150706a");
+}
+
+.Tool-SeriesPanelChange-ON {
+    background-image: url("../img/x1/Tool/SeriesPC_on.png?20150706a");
+}
+
+/* DicomTag表示 */
+.Tool-DicomTag-OFF {
+    background-image: url("../img/x1/Tool/DicomTag_off.png?20150706a");
+}
+
+.Tool-DicomTag-ON {
+    background-image: url("../img/x1/Tool/DicomTag_on.png?20150706a");
+}
+
+/* 検査メモ */
+.Tool-StudyMemo-OFF {
+    background-image: url("../img/x1/Tool/StudyMemo_off.png?20150706a");
+}
+
+.Tool-StudyMemo-ON {
+    background-image: url("../img/x1/Tool/StudyMemo_on.png?20150706a");
+}
+
+/* レポート連携 */
+.Tool-Report-OFF {
+    background-image: url("../img/x1/Tool/Report_off.png?20150706a");
+}
+
+.Tool-Report-ON {
+    background-image: url("../img/x1/Tool/Report_on.png?20150706a");
+}
+
+/* レポート出力 */
+.Tool-ReportOutput-OFF {
+    background-image: url("../img/x1/Tool/ReportOutput_off.png?20150706a");
+}
+
+.Tool-ReportOutput-ON {
+    background-image: url("../img/x1/Tool/ReportOutput_on.png?20150706a");
+}
+
+/* トップリンク */
+.Tool-TopLink-OFF {
+    background-image: url("../img/x1/Tool/TopLink_off.png?20150706a");
+}
+
+.Tool-TopLink-ON {
+    background-image: url("../img/x1/Tool/TopLink_on.png?20150706a");
+}
+
+/* 間引き */
+#Tool-ThinOut-Enabled {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 80%;
+    font-weight: bold;
+    color: #fafad2;
+}
+
+.Tool-ThinOut-Disabled-Part-OFF {
+    background-image: url("../img/x1/Tool/ThinOut_disabled_part_off.png?20150706a");
+}
+
+.Tool-ThinOut-Disabled-Part-ON {
+    background-image: url("../img/x1/Tool/ThinOut_disabled_part_on.png?20150706a");
+}
+
+.Tool-ThinOut-Disabled-All-OFF {
+    background-image: url("../img/x1/Tool/ThinOut_disabled_all_off.png?20150706a");
+}
+
+.Tool-ThinOut-Disabled-All-ON {
+    background-image: url("../img/x1/Tool/ThinOut_disabled_all_on.png?20150706a");
+}
+
+.Tool-ThinOut-Enabled-OFF {
+    background-image: url("../img/x1/Tool/ThinOut_enabled_off.png?20150706a");
+}
+
+.Tool-ThinOut-Enabled-ON {
+    background-image: url("../img/x1/Tool/ThinOut_enabled_on.png?20150706a");
+}
+
+.Tool-ThinOut-Side-OFF {
+    background-image: url("../img/x1/Tool/ThinOut_side_off.png?20150706a");
+}
+
+.Tool-ThinOut-Side-ON {
+    background-image: url("../img/x1/Tool/ThinOut_side_on.png?20150706a");
+}
+
+#Tool-ThinOut-Side-Sub {
+    background-color: #aebece;
+    border-top: 1.5px solid #dffeff;
+    border-left: 1.5px solid #dffeff;
+    border-bottom: 1.5px solid #5a6977;
+    border-right: 1.5px solid #5a6977;
+    padding: 0px 1px 1px 0px;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: 0px;
+    left: 0px;
+}
+
+.Tool-ThinOut-Side-Sub-Item {
+    color: #0c1c2c;
+    cursor: pointer;
+    padding: 4px 12px 2px 11px;
+    white-space: pre;
+}
+
+    .Tool-ThinOut-Side-Sub-Item:hover {
+        background-color: #becede;
+    }
+
+.Tool-ThinOut-Side-Sub-Item-ON {
+    background-color: #becede;
+}
+
+    .Tool-ThinOut-Side-Sub-Item-ON:hover {
+        background-color: #becede;
+    }
+
+.Tool-ThinOut-Side-Sub-Item-Select {
+    background-color: #72a3b9;
+}
+
+/* GSPS(PR)表示 */
+.Tool-GSPS-OFF {
+    background-image: url("../img/x1/Tool/GSPS_off.png?20150706a");
+}
+
+.Tool-GSPS-ON {
+    background-image: url("../img/x1/Tool/GSPS_on.png?20150706a");
+}
+
+.Tool-GSPS-Side-OFF {
+    background-image: url("../img/x1/Tool/GSPS_side_off.png?20150706a");
+}
+
+.Tool-GSPS-Side-ON {
+    background-image: url("../img/x1/Tool/GSPS_side_on.png?20150706a");
+}
+
+#Tool-GSPS-Side-Sub {
+    background-color: #aebece;
+    border-top: 1.5px solid #dffeff;
+    border-left: 1.5px solid #dffeff;
+    border-bottom: 1.5px solid #5a6977;
+    border-right: 1.5px solid #5a6977;
+    padding: 0px 1px 1px 0px;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: 0px;
+    left: 0px;
+}
+
+.Tool-GSPS-Side-Sub-Item {
+    color: #0c1c2c;
+    cursor: pointer;
+    padding: 4px 12px 2px 11px;
+    white-space: pre;
+}
+
+    .Tool-GSPS-Side-Sub-Item:hover {
+        background-color: #becede;
+    }
+
+.Tool-GSPS-Side-Sub-Item-ON {
+    background-color: #72a3b9;
+}
+
+    .Tool-GSPS-Side-Sub-Item-ON:hover {
+        background-color: #72a3b9;
+    }
+
+.Tool-GSPS-Side-Sub-Item-Select {
+    background-color: #72a3b9;
+}
+
+.Tool-GSPS-Side-Sub-Separator {
+    background-color: #7a8c99;
+    margin: 3px 6px 3px 6px;
+    height: 1px;
+    overflow: hidden;
+    display: none;
+}
+
+/* iPad向け */
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+    /*#ToolArea {
+        background-image: url("../img/x2/MenuBack1.png?20150706a");
+    }
+
+    #ToolArea-View-Overlay-Left {
+        background-image: url("../img/x2/OverlayB_Left.png?20150706a");
+    }
+
+    #ToolArea-View-Overlay-Right {
+        background-image: url("../img/x2/OverlayB_Right.png?20150706a");
+    }
+
+    .Tool-Dummy {
+        background-image: url("../img/x2/Tool/dummy_off.png?20150706a");
+    }
+
+    .Tool-WindowLevel-OFF {
+        background-image: url("../img/x2/Tool/WL_off.png?20150706a");
+    }
+
+    .Tool-WindowLevel-ON {
+        background-image: url("../img/x2/Tool/WL_on.png?20150706a");
+    }
+
+    .Tool-WindowLevel-Side-OFF {
+        background-image: url("../img/x2/Tool/WL_side_off.png?20150706a");
+    }
+
+    .Tool-WindowLevel-Side-ON {
+        background-image: url("../img/x2/Tool/WL_side_on.png?20150706a");
+    }
+
+    .Tool-Scale-OFF {
+        background-image: url("../img/x2/Tool/Zoom_off.png?20150706a");
+    }
+
+    .Tool-Scale-ON {
+        background-image: url("../img/x2/Tool/Zoom_on.png?20150706a");
+    }
+
+    .Tool-Move-OFF {
+        background-image: url("../img/x2/Tool/Pan_off.png?20150706a");
+    }
+
+    .Tool-Move-ON {
+        background-image: url("../img/x2/Tool/Pan_on.png?20150706a");
+    }
+
+    .Tool-Distance-OFF {
+        background-image: url("../img/x2/Tool/Distance_off.png?20150706a");
+    }
+
+    .Tool-Distance-ON {
+        background-image: url("../img/x2/Tool/Distance_on.png?20150706a");
+    }
+
+    .Tool-CTAnalyze-OFF {
+        background-image: url("../img/x2/Tool/ROI_off.png?20150706a");
+    }
+
+    .Tool-CTAnalyze-ON {
+        background-image: url("../img/x2/Tool/ROI_on.png?20150706a");
+    }
+
+    .Tool-Angle3-OFF {
+        background-image: url("../img/x2/Tool/Angle3_off.png?20150706a");
+    }
+
+    .Tool-Angle3-ON {
+        background-image: url("../img/x2/Tool/Angle3_on.png?20150706a");
+    }
+
+    .Tool-Angle4-OFF {
+        background-image: url("../img/x2/Tool/Angle4_off.png?20150706a");
+    }
+
+    .Tool-Angle4-ON {
+        background-image: url("../img/x2/Tool/Angle4_on.png?20150706a");
+    }
+
+    .Tool-CTRMeasure-OFF {
+        background-image: url("../img/x2/Tool/CTR_off.png?20150706a");
+    }
+
+    .Tool-CTRMeasure-ON {
+        background-image: url("../img/x2/Tool/CTR_on.png?20150706a");
+    }
+
+    .Tool-Measure-Side-OFF {
+        background-image: url("../img/x2/Tool/Measure_side_off.png?20150706a");
+    }
+
+    .Tool-Measure-Side-ON {
+        background-image: url("../img/x2/Tool/Measure_side_on.png?20150706a");
+    }
+
+    .Tool-Measure-Distance-OFF {
+        background-image: url("../img/x2/Tool/Measure_Distance_off.png?20150706a");
+    }
+
+    .Tool-Measure-Distance-Side-Sub-OFF {
+        background-image: url("../img/x2/Tool/Distance_off.png?20150706a");
+    }
+
+    .Tool-Measure-Distance-ON {
+        background-image: url("../img/x2/Tool/Measure_Distance_on.png?20150706a");
+    }
+
+    .Tool-Measure-Distance-Side-Sub-ON {
+        background-image: url("../img/x2/Tool/Distance_on.png?20150706a");
+    }
+
+    .Tool-Measure-CTAnalyze-OFF {
+        background-image: url("../img/x2/Tool/Measure_ROI_off.png?20150706a");
+    }
+
+    .Tool-Measure-CTAnalyze-Side-Sub-OFF {
+        background-image: url("../img/x2/Tool/ROI_off.png?20150706a");
+    }
+
+    .Tool-Measure-CTAnalyze-ON {
+        background-image: url("../img/x2/Tool/Measure_ROI_on.png?20150706a");
+    }
+
+    .Tool-Measure-CTAnalyze-Side-Sub-ON {
+        background-image: url("../img/x2/Tool/ROI_on.png?20150706a");
+    }
+
+    .Tool-Measure-Angle3-OFF {
+        background-image: url("../img/x2/Tool/Measure_Angle3_off.png?20150706a");
+    }
+
+    .Tool-Measure-Angle3-Side-Sub-OFF {
+        background-image: url("../img/x2/Tool/Angle3_off.png?20150706a");
+    }
+
+    .Tool-Measure-Angle3-ON {
+        background-image: url("../img/x2/Tool/Measure_Angle3_on.png?20150706a");
+    }
+
+    .Tool-Measure-Angle3-Side-Sub-ON {
+        background-image: url("../img/x2/Tool/Angle3_on.png?20150706a");
+    }
+
+    .Tool-Measure-Angle4-OFF {
+        background-image: url("../img/x2/Tool/Measure_Angle4_off.png?20150706a");
+    }
+
+    .Tool-Measure-Angle4-Side-Sub-OFF {
+        background-image: url("../img/x2/Tool/Angle4_off.png?20150706a");
+    }
+
+    .Tool-Measure-Angle4-ON {
+        background-image: url("../img/x2/Tool/Measure_Angle4_on.png?20150706a");
+    }
+
+    .Tool-Measure-Angle4-Side-Sub-ON {
+        background-image: url("../img/x2/Tool/Angle4_on.png?20150706a");
+    }
+
+    .Tool-Measure-CTRMeasure-OFF {
+        background-image: url("../img/x2/Tool/Measure_CTR_off.png?20150706a");
+    }
+
+    .Tool-Measure-CTRMeasure-Side-Sub-OFF {
+        background-image: url("../img/x2/Tool/CTR_off.png?20150706a");
+    }
+
+    .Tool-Measure-CTRMeasure-ON {
+        background-image: url("../img/x2/Tool/Measure_CTR_on.png?20150706a");
+    }
+
+    .Tool-Measure-CTRMeasure-Side-Sub-ON {
+        background-image: url("../img/x2/Tool/CTR_on.png?20150706a");
+    }
+
+    .Tool-Arrow-OFF {
+        background-image: url("../img/x2/Tool/Arrow_off.png?20150706a");
+    }
+
+    .Tool-Arrow-ON {
+        background-image: url("../img/x2/Tool/Arrow_on.png?20150706a");
+    }
+
+    .Tool-Circle-OFF {
+        background-image: url("../img/x2/Tool/Circle_off.png?20150706a");
+    }
+
+    .Tool-Circle-ON {
+        background-image: url("../img/x2/Tool/Circle_on.png?20150706a");
+    }
+
+    .Tool-FreeLine-OFF {
+        background-image: url("../img/x2/Tool/FreeLine_off.png?20150706a");
+    }
+
+    .Tool-FreeLine-ON {
+        background-image: url("../img/x2/Tool/FreeLine_on.png?20150706a");
+    }
+
+    .Tool-Text-OFF {
+        background-image: url("../img/x2/Tool/Text_off.png?20150706a");
+    }
+
+    .Tool-Text-ON {
+        background-image: url("../img/x2/Tool/Text_on.png?20150706a");
+    }
+
+    .Tool-Reset-OFF {
+        background-image: url("../img/x2/Tool/Reset_off.png?20150706a");
+    }
+
+    .Tool-Reset-ON {
+        background-image: url("../img/x2/Tool/Reset_on.png?20150706a");
+    }
+
+    .Tool-Split-OFF {
+        background-image: url("../img/x2/Tool/Layout_off.png?20150706a");
+    }
+
+    .Tool-Split-ON {
+        background-image: url("../img/x2/Tool/Layout_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-11-OFF {
+        background-image: url("../img/x2/Tool/LayoutS11_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-11-ON {
+        background-image: url("../img/x2/Tool/LayoutS11_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-12-OFF {
+        background-image: url("../img/x2/Tool/LayoutS12_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-12-ON {
+        background-image: url("../img/x2/Tool/LayoutS12_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-21-OFF {
+        background-image: url("../img/x2/Tool/LayoutS21_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-21-ON {
+        background-image: url("../img/x2/Tool/LayoutS21_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-22-OFF {
+        background-image: url("../img/x2/Tool/LayoutS22_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-22-ON {
+        background-image: url("../img/x2/Tool/LayoutS22_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-23-OFF {
+        background-image: url("../img/x2/Tool/LayoutS23_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-23-ON {
+        background-image: url("../img/x2/Tool/LayoutS23_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-24-OFF {
+        background-image: url("../img/x2/Tool/LayoutS24_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Series-24-ON {
+        background-image: url("../img/x2/Tool/LayoutS24_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-11-OFF {
+        background-image: url("../img/x2/Tool/LayoutI11_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-11-ON {
+        background-image: url("../img/x2/Tool/LayoutI11_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-12-OFF {
+        background-image: url("../img/x2/Tool/LayoutI12_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-12-ON {
+        background-image: url("../img/x2/Tool/LayoutI12_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-21-OFF {
+        background-image: url("../img/x2/Tool/LayoutI21_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-21-ON {
+        background-image: url("../img/x2/Tool/LayoutI21_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-22-OFF {
+        background-image: url("../img/x2/Tool/LayoutI22_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-22-ON {
+        background-image: url("../img/x2/Tool/LayoutI22_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-23-OFF {
+        background-image: url("../img/x2/Tool/LayoutI23_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-23-ON {
+        background-image: url("../img/x2/Tool/LayoutI23_on.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-24-OFF {
+        background-image: url("../img/x2/Tool/LayoutI24_off.png?20150706a");
+    }
+
+    .Tool-Split-Sub-Image-24-ON {
+        background-image: url("../img/x2/Tool/LayoutI24_on.png?20150706a");
+    }
+
+    .Tool-Cutline-OFF {
+        background-image: url("../img/x2/Tool/Cutline_off.png?20150706a");
+    }
+
+    .Tool-Cutline-ON {
+        background-image: url("../img/x2/Tool/Cutline_on.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Side-OFF {
+        background-image: url("../img/x2/Tool/Sync_side_off.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Side-ON {
+        background-image: url("../img/x2/Tool/Sync_side_on.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Index-OFF {
+        background-image: url("../img/x2/Tool/Sync_Index_off.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Side-Sub-Index-OFF {
+        background-image: url("../img/x2/Tool/SyncIndex_off.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Index-ON {
+        background-image: url("../img/x2/Tool/Sync_Index_on.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Side-Sub-Index-ON {
+        background-image: url("../img/x2/Tool/SyncIndex_on.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Position-OFF {
+        background-image: url("../img/x2/Tool/Sync_Position_off.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Side-Sub-Position-OFF {
+        background-image: url("../img/x2/Tool/SyncPosition_off.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Position-ON {
+        background-image: url("../img/x2/Tool/Sync_Position_on.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Side-Sub-Position-ON {
+        background-image: url("../img/x2/Tool/SyncPosition_on.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Thickness-OFF {
+        background-image: url("../img/x2/Tool/Sync_Thickness_off.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Side-Sub-Thickness-OFF {
+        background-image: url("../img/x2/Tool/SyncThickness_off.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Thickness-ON {
+        background-image: url("../img/x2/Tool/Sync_Thickness_on.png?20150706a");
+    }
+
+    .Tool-SeriesSync-Side-Sub-Thickness-ON {
+        background-image: url("../img/x2/Tool/SyncThickness_on.png?20150706a");
+    }
+
+    .Tool-ManualCine-OFF {
+        background-image: url("../img/x2/Tool/MCine_off.png?20150706a");
+    }
+
+    .Tool-ManualCine-ON {
+        background-image: url("../img/x2/Tool/MCine_on.png?20150706a");
+    }
+
+    .Tool-SkipImagePrev-OFF {
+        background-image: url("../img/x2/Tool/SkipImagePrev_off.png?20150706a");
+    }
+
+    .Tool-SkipImagePrev-ON {
+        background-image: url("../img/x2/Tool/SkipImagePrev_on.png?20150706a");
+    }
+
+    .Tool-SkipImageNext-OFF {
+        background-image: url("../img/x2/Tool/SkipImageNext_off.png?20150706a");
+    }
+
+    .Tool-SkipImageNext-ON {
+        background-image: url("../img/x2/Tool/SkipImageNext_on.png?20150706a");
+    }
+
+    .Tool-SkipImage-OFF {
+        background-image: url("../img/x2/Tool/Skip_off.png?20150706a");
+    }
+
+    .Tool-SkipImage-ON {
+        background-image: url("../img/x2/Tool/Skip_on.png?20150706a");
+    }
+
+    .Tool-SkipImage-Sub-Top-OFF {
+        background-image: url("../img/x2/Tool/SkipTop_off.png?20150706a");
+    }
+
+    .Tool-SkipImage-Sub-Top-ON {
+        background-image: url("../img/x2/Tool/SkipTop_on.png?20150706a");
+    }
+
+    .Tool-SkipImage-Sub-Middle-OFF {
+        background-image: url("../img/x2/Tool/SkipMiddle_off.png?20150706a");
+    }
+
+    .Tool-SkipImage-Sub-Middle-ON {
+        background-image: url("../img/x2/Tool/SkipMiddle_on.png?20150706a");
+    }
+
+    .Tool-SkipImage-Sub-Bottom-OFF {
+        background-image: url("../img/x2/Tool/SkipBottom_off.png?20150706a");
+    }
+
+    .Tool-SkipImage-Sub-Bottom-ON {
+        background-image: url("../img/x2/Tool/SkipBottom_on.png?20150706a");
+    }
+
+    .Tool-SkipSeriesPrev-OFF {
+        background-image: url("../img/x2/Tool/SkipSeriesPrev_off.png?20150706a");
+    }
+
+    .Tool-SkipSeriesPrev-ON {
+        background-image: url("../img/x2/Tool/SkipSeriesPrev_on.png?20150706a");
+    }
+
+    .Tool-SkipSeriesNext-OFF {
+        background-image: url("../img/x2/Tool/SkipSeriesNext_off.png?20150706a");
+    }
+
+    .Tool-SkipSeriesNext-ON {
+        background-image: url("../img/x2/Tool/SkipSeriesNext_on.png?20150706a");
+    }
+
+    .Tool-Rotate-OFF {
+        background-image: url("../img/x2/Tool/Rotate_off.png?20150706a");
+    }
+
+    .Tool-Rotate-ON {
+        background-image: url("../img/x2/Tool/Rotate_on.png?20150706a");
+    }
+
+    .Tool-Annotation-OFF {
+        background-image: url("../img/x1/icon.png");
+        background-position: -630px -180px;
+    }
+
+    .Tool-Annotation-ON {
+        background-image: url("../img/x1/icon.png");
+        background-position: -630px -128px;
+    }
+
+    .Tool-Help-OFF {
+        background-image: url("../img/x2/Tool/Help_off.png?20150706a");
+    }
+
+    .Tool-Help-ON {
+        background-image: url("../img/x2/Tool/Help_on.png?20150706a");
+    }
+
+    .Tool-Exit-OFF {
+        background-image: url("../img/x2/Tool/Close_off.png?20150706a");
+    }
+
+    .Tool-Exit-ON {
+        background-image: url("../img/x2/Tool/Close_on.png?20150706a");
+    }
+
+    .Tool-ToolAreaChange-Top-OFF {
+        background-image: url("../img/x2/Tool/ToolAC_down_off.png?20150706a");
+    }
+
+    .Tool-ToolAreaChange-Top-ON {
+        background-image: url("../img/x2/Tool/ToolAC_down_on.png?20150706a");
+    }
+
+    .Tool-ToolAreaChange-Bottom-OFF {
+        background-image: url("../img/x2/Tool/ToolAC_up_off.png?20150706a");
+    }
+
+    .Tool-ToolAreaChange-Bottom-ON {
+        background-image: url("../img/x2/Tool/ToolAC_up_on.png?20150706a");
+    }
+
+    .Tool-SeriesPanelChange-OFF {
+        background-image: url("../img/x2/Tool/SeriesPC_off.png?20150706a");
+    }
+
+    .Tool-SeriesPanelChange-ON {
+        background-image: url("../img/x2/Tool/SeriesPC_on.png?20150706a");
+    }
+
+    .Tool-DicomTag-OFF {
+        background-image: url("../img/x2/Tool/DicomTag_off.png?20150706a");
+    }
+
+    .Tool-DicomTag-ON {
+        background-image: url("../img/x2/Tool/DicomTag_on.png?20150706a");
+    }
+
+    .Tool-StudyMemo-OFF {
+        background-image: url("../img/x2/Tool/StudyMemo_off.png?20150706a");
+    }
+
+    .Tool-StudyMemo-ON {
+        background-image: url("../img/x2/Tool/StudyMemo_on.png?20150706a");
+    }
+
+    .Tool-Report-OFF {
+        background-image: url("../img/x2/Tool/Report_off.png?20150706a");
+    }
+
+    .Tool-Report-ON {
+        background-image: url("../img/x2/Tool/Report_on.png?20150706a");
+    }
+
+    .Tool-ReportOutput-OFF {
+        background-image: url("../img/x2/Tool/ReportOutput_off.png?20150706a");
+    }
+
+    .Tool-ReportOutput-ON {
+        background-image: url("../img/x2/Tool/ReportOutput_on.png?20150706a");
+    }
+
+    .Tool-TopLink-OFF {
+        background-image: url("../img/x2/Tool/TopLink_off.png?20150706a");
+    }
+
+    .Tool-TopLink-ON {
+        background-image: url("../img/x2/Tool/TopLink_on.png?20150706a");
+    }
+
+    .Tool-ThinOut-Disabled-Part-OFF {
+        background-image: url("../img/x2/Tool/ThinOut_disabled_part_off.png?20150706a");
+    }
+
+    .Tool-ThinOut-Disabled-Part-ON {
+        background-image: url("../img/x2/Tool/ThinOut_disabled_part_on.png?20150706a");
+    }
+
+    .Tool-ThinOut-Disabled-All-OFF {
+        background-image: url("../img/x2/Tool/ThinOut_disabled_all_off.png?20150706a");
+    }
+
+    .Tool-ThinOut-Disabled-All-ON {
+        background-image: url("../img/x2/Tool/ThinOut_disabled_all_on.png?20150706a");
+    }
+
+    .Tool-ThinOut-Enabled-OFF {
+        background-image: url("../img/x2/Tool/ThinOut_enabled_off.png?20150706a");
+    }
+
+    .Tool-ThinOut-Enabled-ON {
+        background-image: url("../img/x2/Tool/ThinOut_enabled_on.png?20150706a");
+    }
+
+    .Tool-ThinOut-Side-OFF {
+        background-image: url("../img/x2/Tool/ThinOut_side_off.png?20150706a");
+    }
+
+    .Tool-ThinOut-Side-ON {
+        background-image: url("../img/x2/Tool/ThinOut_side_on.png?20150706a");
+    }
+
+    .Tool-GSPS-OFF {
+        background-image: url("../img/x2/Tool/GSPS_off.png?20150706a");
+    }
+
+    .Tool-GSPS-ON {
+        background-image: url("../img/x2/Tool/GSPS_on.png?20150706a");
+    }
+
+    .Tool-GSPS-Side-OFF {
+        background-image: url("../img/x2/Tool/GSPS_side_off.png?20150706a");
+    }
+
+    .Tool-GSPS-Side-ON {
+        background-image: url("../img/x2/Tool/GSPS_side_on.png?20150706a");
+    }*/
+}

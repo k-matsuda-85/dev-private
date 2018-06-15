@@ -1,0 +1,1338 @@
+﻿/* 検索情報 */
+#SearchMenu-Info {
+    background-image: url("../img/x1/MenuInfo2.png?20150706a");
+    background-size: 100%;
+    position: relative;
+    width: 120px;
+    height: 66px;
+    z-index: 2;
+    cursor: default;
+}
+#SearchMenu-Info-Title {
+    position: absolute;
+    top: 14px;
+    left: 25px;
+    font-size: 90%;
+}
+#SearchMenu-Info-View {
+    position: absolute;
+    top: 33px;
+    left: 5px;
+    text-align: center;
+    width: 100px;
+}
+
+/* 検索基本 */
+#SearchMenu-Basic {
+    margin: -66px 0px 0px 0px;
+    background-image: url("../img/x1/MenuBack2.png?20150706a");
+    position: relative;
+    width: 282px;
+    height: 66px;
+    z-index: 1;
+}
+#SearchMenu-Basic-Search {
+    cursor: pointer;
+    background-image: url("../img/x1/MenuSearch.png?20150706a");
+    background-size: 100%;
+    width: 92px;
+    height: 38px;
+    position: absolute;
+    top: 14px;
+    left: 120px;
+}
+#SearchMenu-Basic-Reset {
+    cursor: pointer;
+    background-image: url("../img/x1/MenuReset.png?20150706a");
+    background-size: 100%;
+    width: 64px;
+    height: 38px;
+    position: absolute;
+    top: 14px;
+    left: 213px;
+}
+
+/* 検索コマンド */
+#SearchMenu-Command {
+    margin: -66px 0px 0px 0px;
+    background-image: url("../img/x1/MenuBack2.png?20150706a");
+    width: 100%;
+    height: 66px;
+}
+#SearchMenu-Command-View {
+    position: absolute;
+    margin: 7px 0px 0px 0px;
+    height: 48px;
+    overflow: hidden;
+    left: 282px;
+}
+#SearchMenu-Command-View-Overlay-Left {
+    cursor: pointer;
+    overflow: hidden;
+    margin: 7px 0px 0px 0px;
+    position: absolute;
+    left: 282px;
+    background-image: url("../img/x1/OverlayA_Left.png?20150706a");
+    background-size: 100%;
+    width: 24px;
+    height: 48px;
+    display: none;
+}
+#SearchMenu-Command-View-Overlay-Right {
+    cursor: pointer;
+    overflow: hidden;
+    margin: 7px 0px 0px 0px;
+    position: absolute;
+    left: 282px;
+    background-image: url("../img/x1/OverlayA_Right.png?20150706a");
+    background-size: 100%;
+    width: 24px;
+    height: 48px;
+    display: none;
+}
+.SearchMenu-Command-Common {
+    float: left;
+}
+.SearchMenu-Command-Preset {
+    cursor: pointer;
+    background-image: url("../img/x1/MenuPreset.png?20150706a");
+    background-size: 100%;
+    width: 94px;
+    height: 38px;
+    margin: 7px 0px 10px 0px;
+}
+.SearchMenu-Command-Preset-Text {
+    width: 90px;
+    margin: 1px 3px 0px 0px;
+    line-height: 34px;
+    overflow: hidden;
+    text-align: center;
+    white-space: pre;
+}
+.SearchMenu-Command-Preset-Margin {
+    width: 2px;
+    height: 48px;
+    float: left;
+}
+#SearchMenu-Command-Left-Margin {
+    width: 5px;
+    height: 48px;
+    float: left;
+}
+#SearchMenu-Command-PacsSearch {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+}
+#SearchMenu-Command-PacsSearch-Margin {
+    width: 5px;
+    height: 48px;
+    float: left;
+}
+.SearchMenu-Command-PacsSearch-OFF {
+    background-image: url("../img/x1/PACS_off.png?20150706a");
+    background-size: 100%;
+}
+.SearchMenu-Command-PacsSearch-ON {
+    background-image: url("../img/x1/PACS_on.png?20150706a");
+    background-size: 100%;
+}
+#SearchMenu-Command-Menu {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+}
+#SearchMenu-Command-Menu-Margin {
+    width: 5px;
+    height: 48px;
+    float: left;
+}
+.SearchMenu-Command-Menu-OFF {
+    background-image: url("../img/x1/Menu_off.png?20150706a");
+    background-size: 100%;
+}
+.SearchMenu-Command-Menu-ON {
+    background-image: url("../img/x1/Menu_on.png?20150706a");
+    background-size: 100%;
+}
+#SearchMenu-Command-Option {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+}
+#SearchMenu-Command-Option-Margin {
+    width: 15px;
+    height: 48px;
+    float: left;
+}
+.SearchMenu-Command-Option-OFF {
+    background-image: url("../img/x1/Option_off.png?20150706a");
+    background-size: 100%;
+}
+.SearchMenu-Command-Option-ON {
+    background-image: url("../img/x1/Option_on.png?20150706a");
+    background-size: 100%;
+}
+#SearchMenu-Command-Uploader {
+    cursor: pointer;
+    background-image: url("../img/x1/Uploader_off.png?20150706a");
+    background-size: 100%;
+    width: 48px;
+    height: 48px;
+}
+#SearchMenu-Command-Uploader-Margin {
+    width: 15px;
+    height: 48px;
+    float: left;
+}
+#SearchMenu-Command-Portal {
+    cursor: pointer;
+    background-image: url("../img/x1/Portal_off.png?20150706a");
+    background-size: 100%;
+    width: 48px;
+    height: 48px;
+}
+#SearchMenu-Command-Portal-Margin {
+    width: 15px;
+    height: 48px;
+    float: left;
+}
+#SearchMenu-Command-SearchHelp {
+    cursor: pointer;
+    background-image: url("../img/x1/Help_off.png?20150706a");
+    background-size: 100%;
+    width: 48px;
+    height: 48px;
+}
+#SearchMenu-Command-SearchHelp-Margin {
+    width: 15px;
+    height: 48px;
+    float: left;
+}
+#SearchMenu-Command-Close {
+    cursor: pointer;
+    background-size: 100%;
+    width: 48px;
+    height: 48px;
+}
+#SearchMenu-Command-Close-Margin {
+    width: 15px;
+    height: 48px;
+    float: left;
+}
+.SearchMenu-Command-Close-Logout {
+    background-image: url("../img/x1/Logout2_off.png?20150706a");
+}
+.SearchMenu-Command-Close-Exit {
+    background-image: url("../img/x1/Close_off.png?20150706a");
+}
+
+/* 検索入力部 */
+#SearchMenu-Input-Left {
+    border-left: 1px solid #425d68;
+    border-bottom: 1px solid #425d68;
+    background-color: #658d9e;
+}
+.SearchMenu-Input-Center {
+    border-bottom: 1px solid #425d68;
+    background-color: #658d9e;
+    height: 50px;
+}
+#SearchMenu-Input-Right {
+    border-right: 1px solid #425d68;
+    border-bottom: 1px solid #425d68;
+    background-color: #658d9e;
+}
+#SearchMenu-Input-HospitalName,
+#SearchMenu-Input-StudyDate,
+#SearchMenu-Input-PatientID,
+#SearchMenu-Input-PatientsName,
+#SearchMenu-Input-Modality,
+#SearchMenu-Input-UploadDate,
+#SearchMenu-Input-UploadDateTime,
+#SearchMenu-Input-AccessionNumber,
+#SearchMenu-Input-Keyword,
+#SearchMenu-Input-Comment,
+#SearchMenu-Input-StudyDateTime {
+    font-size: 110%;
+    width: 100%;
+    display: block;
+}
+#SearchMenu-Input-HospitalName-Side,
+#SearchMenu-Input-StudyDate-Side,
+#SearchMenu-Input-Modality-Side,
+#SearchMenu-Input-UploadDate-Side,
+#SearchMenu-Input-UploadDateTime-Side,
+#SearchMenu-Input-StudyDateTime-Side,
+#SearchMenu-Input-Keyword-Side {
+    cursor: pointer;
+    background-image: url("../img/x1/InputSubMenu.png?20150706a");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin: -24px 0px 0px 0px;
+    position: relative;
+    left: 30px;
+}
+.SearchMenu-Input-Side-Enable {
+    padding-right: 35px;
+}
+.SearchMenu-Input-Side-Disable {
+    padding-right: 10px;
+}
+
+/* メニュー */
+#SearchMenu-Command-Sub-Menu,
+#SearchMenu-Command-Sub-Option,
+#SearchMenu-Input-Sub-HospitalName,
+#SearchMenu-Input-Sub-StudyDate,
+#SearchMenu-Input-Sub-Modality,
+#SearchMenu-Input-Sub-UploadDate,
+#SearchMenu-Input-Sub-UploadDateTime,
+#SearchMenu-Input-Sub-StudyDateTime,
+#SearchMenu-Input-Sub-Keyword {
+    background-color: #aebece;
+    border-top: 1.5px solid #dffeff;
+    border-left: 1.5px solid #dffeff;
+    border-bottom: 1.5px solid #5a6977;
+    border-right: 1.5px solid #5a6977;
+    padding: 0px 1px 1px 0px;
+    overflow: auto;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: 0px;
+    left: 0px;
+}
+.SearchMenu-Command-Sub-Menu-Item,
+.SearchMenu-Command-Sub-Option-Item,
+.SearchMenu-Input-Sub-HospitalName-Item,
+.SearchMenu-Input-Sub-StudyDate-Item,
+.SearchMenu-Input-Sub-Modality-Item,
+.SearchMenu-Input-Sub-UploadDate-Item,
+.SearchMenu-Input-Sub-UploadDateTime-Item,
+.SearchMenu-Input-Sub-StudyDateTime-Item,
+.SearchMenu-Input-Sub-Keyword-Item {
+    color: #0c1c2c;
+    cursor: pointer;
+    padding: 4px 12px 2px 11px;
+    white-space: pre;
+}
+    .SearchMenu-Command-Sub-Menu-Item:hover,
+    .SearchMenu-Command-Sub-Option-Item:hover,
+    .SearchMenu-Input-Sub-HospitalName-Item:hover,
+    .SearchMenu-Input-Sub-StudyDate-Item:hover,
+    .SearchMenu-Input-Sub-Modality-Item:hover,
+    .SearchMenu-Input-Sub-UploadDate-Item:hover,
+    .SearchMenu-Input-Sub-UploadDateTime-Item:hover,
+    .SearchMenu-Input-Sub-StudyDateTime-Item:hover,
+    .SearchMenu-Input-Sub-Keyword-Item:hover {
+        background-color: #becede;
+    }
+.SearchMenu-Command-Sub-Menu-Item-ON,
+.SearchMenu-Command-Sub-Option-Item-ON,
+.SearchMenu-Input-Sub-HospitalName-Item-ON,
+.SearchMenu-Input-Sub-StudyDate-Item-ON,
+.SearchMenu-Input-Sub-Modality-Item-ON,
+.SearchMenu-Input-Sub-UploadDate-Item-ON,
+.SearchMenu-Input-Sub-UploadDateTime-Item-ON,
+.SearchMenu-Input-Sub-StudyDateTime-Item-ON,
+.SearchMenu-Input-Sub-Keyword-Item-ON {
+    background-color: #72a3b9;
+}
+    .SearchMenu-Command-Sub-Menu-Item-ON:hover,
+    .SearchMenu-Command-Sub-Option-Item-ON:hover,
+    .SearchMenu-Input-Sub-HospitalName-Item-ON:hover,
+    .SearchMenu-Input-Sub-StudyDate-Item-ON:hover,
+    .SearchMenu-Input-Sub-Modality-Item-ON:hover,
+    .SearchMenu-Input-Sub-UploadDate-Item-ON:hover,
+    .SearchMenu-Input-Sub-UploadDateTime-Item-ON:hover,
+    .SearchMenu-Input-Sub-StudyDateTime-Item-ON:hover,
+    .SearchMenu-Input-Sub-Keyword-Item-ON:hover {
+        background-color: #72a3b9;
+    }
+
+/* メニュー内共通 */
+.SearchMenu-Command-Menu-Text-Invalid {
+    color: #ff0000 !important;
+}
+
+/* キーワード設定 */
+#SearchMenu-Command-Menu-SetKeyword {
+    background-color: #7aaac0;
+    border: 1px solid #425d68;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    margin: -48px 0px 0px -120px;
+}
+#SearchMenu-Command-Menu-SetKeyword-Head {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetKeyword-Head-Title {
+    font-size: 120%;
+}
+#SearchMenu-Command-Menu-SetKeyword-Body {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetKeyword-Body-Input {
+    border: 1px solid #425d68;
+    width: 224px;
+    font-size: 100%;
+    padding: 2px 2px 2px 2px;
+}
+#SearchMenu-Command-Menu-SetKeyword-Body-Option {
+    margin: 5px 15px 5px 15px;
+}
+#SearchMenu-Command-Menu-SetKeyword-Body-Option-Checkbox {
+    vertical-align: middle;
+}
+#SearchMenu-Command-Menu-SetKeyword-Body-Option span {
+    margin: 0px 0px 0px 5px;
+    font-size: 80%;
+    vertical-align: middle;
+}
+#SearchMenu-Command-Menu-SetKeyword-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetKeyword-Foot-OK {
+    position: relative;
+    top: 0px;
+    left: 26px;
+    width: 80px;
+    height: 24px;
+}
+#SearchMenu-Command-Menu-SetKeyword-Foot-Cancel {
+    position: relative;
+    top: 0px;
+    left: 126px;
+    width: 80px;
+    height: 24px;
+    margin: -24px 0px 0px 0px;
+}
+    #SearchMenu-Command-Menu-SetKeyword-Foot-OK input,
+    #SearchMenu-Command-Menu-SetKeyword-Foot-Cancel input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* コメント設定 */
+#SearchMenu-Command-Menu-SetComment {
+    background-color: #7aaac0;
+    border: 1px solid #425d68;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    margin: -48px 0px 0px -120px;
+}
+#SearchMenu-Command-Menu-SetComment-Head {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetComment-Head-Title {
+    font-size: 120%;
+}
+#SearchMenu-Command-Menu-SetComment-Body {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetComment-Body-Input {
+    border: 1px solid #425d68;
+    width: 224px;
+    font-size: 100%;
+    padding: 2px 2px 2px 2px;
+}
+#SearchMenu-Command-Menu-SetComment-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetComment-Foot-OK {
+    position: relative;
+    top: 0px;
+    left: 26px;
+    width: 80px;
+    height: 24px;
+}
+#SearchMenu-Command-Menu-SetComment-Foot-Cancel {
+    position: relative;
+    top: 0px;
+    left: 126px;
+    width: 80px;
+    height: 24px;
+    margin: -24px 0px 0px 0px;
+}
+    #SearchMenu-Command-Menu-SetComment-Foot-OK input,
+    #SearchMenu-Command-Menu-SetComment-Foot-Cancel input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* 検査パスワード設定 */
+#SearchMenu-Command-Menu-SetStudyPassword {
+    background-color: #7aaac0;
+    border: 1px solid #425d68;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    margin: -48px 0px 0px -120px;
+}
+#SearchMenu-Command-Menu-SetStudyPassword-Head {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetStudyPassword-Head-Title {
+    font-size: 120%;
+}
+#SearchMenu-Command-Menu-SetStudyPassword-Body {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetStudyPassword-Body-Input {
+    border: 1px solid #425d68;
+    width: 224px;
+    font-size: 100%;
+    padding: 2px 2px 2px 2px;
+}
+#SearchMenu-Command-Menu-SetStudyPassword-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetStudyPassword-Foot-OK {
+    position: relative;
+    top: 0px;
+    left: 26px;
+    width: 80px;
+    height: 24px;
+}
+#SearchMenu-Command-Menu-SetStudyPassword-Foot-Cancel {
+    position: relative;
+    top: 0px;
+    left: 126px;
+    width: 80px;
+    height: 24px;
+    margin: -24px 0px 0px 0px;
+}
+    #SearchMenu-Command-Menu-SetStudyPassword-Foot-OK input,
+    #SearchMenu-Command-Menu-SetStudyPassword-Foot-Cancel input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* ポータル設定 */
+#SearchMenu-Command-Menu-SetPortal {
+    background-color: #7aaac0;
+    border: 1px solid #425d68;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    margin: -220px 0px 0px -180px;
+}
+#SearchMenu-Command-Menu-SetPortal-Head {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetPortal-Head-Title {
+    font-size: 120%;
+}
+#SearchMenu-Command-Menu-SetPortal-Body {
+    background-color: #f8f8ff;
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+}
+#SearchMenu-Command-Menu-SetPortal-Body-Column1-Label,
+#SearchMenu-Command-Menu-SetPortal-Body-Column2-Label,
+#SearchMenu-Command-Menu-SetPortal-Body-Column3-Label {
+    margin: 0px 0px 2px 0px;
+    word-wrap: break-word;
+}
+.SearchMenu-Command-Menu-SetPortal-Body-Notes {
+    margin: 0px 0px 0px 10px;
+    font-size: 80%;
+    color: #666666;
+}
+#SearchMenu-Command-Menu-SetPortal-Body-Column1-Text {
+    margin: 0px 0px 10px 0px;
+}
+    #SearchMenu-Command-Menu-SetPortal-Body-Column1-Text input {
+        border: 1px solid #425d68;
+        width: 324px;
+        font-size: 100%;
+        padding: 2px 2px 2px 2px;
+    }
+    #SearchMenu-Command-Menu-SetPortal-Body-Column2-Text textarea {
+        overflow: auto;
+        border: 1px solid #425d68;
+        width: 324px;
+        height: 55px;
+        font-size: 100%;
+        padding: 2px 2px 2px 2px;
+        white-space: pre;
+    }
+    #SearchMenu-Command-Menu-SetPortal-Body-Column3-Text textarea {
+        overflow: auto;
+        border: 1px solid #425d68;
+        width: 324px;
+        height: 92px;
+        font-size: 100%;
+        padding: 2px 2px 2px 2px;
+        white-space: pre;
+    }
+#SearchMenu-Command-Menu-SetPortal-Body-Column2-Count,
+#SearchMenu-Command-Menu-SetPortal-Body-Column3-Count {
+    height: 18px;
+    margin: 2px 0px 0px 8px;
+    text-align: right;
+    font-size: 80%;
+    color: #000099;
+}
+#SearchMenu-Command-Menu-SetPortal-Body-Enable {
+    text-align: right;
+}
+    #SearchMenu-Command-Menu-SetPortal-Body-Enable input {
+        vertical-align: middle;
+    }
+    #SearchMenu-Command-Menu-SetPortal-Body-Enable span {
+        vertical-align: middle;
+        margin: 0px 0px 0px 5px;
+    }
+#SearchMenu-Command-Menu-SetPortal-Body-Message {
+    color: #ff0000;
+}
+#SearchMenu-Command-Menu-SetPortal-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetPortal-Foot-OK {
+    position: relative;
+    top: 0px;
+    left: 90px;
+    width: 80px;
+    height: 24px;
+}
+#SearchMenu-Command-Menu-SetPortal-Foot-Cancel {
+    position: relative;
+    top: 0px;
+    left: 190px;
+    width: 80px;
+    height: 24px;
+    margin: -24px 0px 0px 0px;
+}
+    #SearchMenu-Command-Menu-SetPortal-Foot-OK input,
+    #SearchMenu-Command-Menu-SetPortal-Foot-Cancel input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* URL表示 */
+#SearchMenu-Command-Menu-ShowURL {
+    background-color: #7aaac0;
+    border: 1px solid #425d68;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 510px;
+    margin: -48px 0px 0px -255px;
+}
+#SearchMenu-Command-Menu-ShowURL-Head {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-ShowURL-Head-Title {
+    font-size: 120%;
+}
+#SearchMenu-Command-Menu-ShowURL-Body {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-ShowURL-Body-Input {
+    vertical-align: middle;
+    width: 406px;
+    padding: 2px 2px 2px 2px;
+}
+#SearchMenu-Command-Menu-ShowURL-Body-Button {
+    margin: 0px 0px 0px 5px;
+    vertical-align: middle;
+    width: 80px;
+    height: 24px;
+}
+#SearchMenu-Command-Menu-ShowURL-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-ShowURL-Foot-OK {
+    position: relative;
+    top: 0px;
+    left: 210px;
+    width: 80px;
+    height: 24px;
+}
+    #SearchMenu-Command-Menu-ShowURL-Foot-OK input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* 検査削除 */
+#SearchMenu-Command-Menu-DeleteStudy {
+    background-color: #7aaac0;
+    border: 1px solid #425d68;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    margin: -55px 0px 0px -120px;
+}
+#SearchMenu-Command-Menu-DeleteStudy-Head {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-DeleteStudy-Head-Title {
+    font-size: 120%;
+}
+#SearchMenu-Command-Menu-DeleteStudy-Body {
+    background-color: #ffffff;
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-DeleteStudy-Body-Text {
+    width: 228px;
+    height: 38px;
+    line-height: 120%;
+}
+#SearchMenu-Command-Menu-DeleteStudy-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-DeleteStudy-Foot-Cancel {
+    position: relative;
+    top: 0px;
+    left: 80px;
+    width: 80px;
+    height: 24px;
+}
+    #SearchMenu-Command-Menu-DeleteStudy-Foot-Cancel input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* 画像削除 */
+#SearchMenu-Command-Menu-DeleteImage {
+    background-color: #7aaac0;
+    border: 1px solid #425d68;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    margin: -240px 0px 0px -170px;
+}
+#SearchMenu-Command-Menu-DeleteImage-Head {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-DeleteImage-Head-Title {
+    font-size: 120%;
+}
+#SearchMenu-Command-Menu-DeleteImage-Body {
+    background-color: #f8f8ff;
+    height: 360px;
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+}
+#SearchMenu-Command-Menu-DeleteImage-Body-List {
+    position: relative;
+    height: 100%;
+}
+#SearchMenu-Command-Menu-DeleteImage-Body-List-Series {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 1px solid #425d68;
+    width: 145px;
+    height: 300px;
+    overflow: auto;
+    -ms-touch-action: pan-y; /* IE10向け */
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Series-Item {
+    position: relative;
+    height: 72px;
+    margin: 3px 0px 0px 0px;
+    color: #ffffff;
+    -ms-touch-action: none; /* IE10向け */
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Series-Item-Checkbox {
+    position: absolute;
+    top: 16px;
+    left: 6px;
+    width: 40px;
+    height: 40px;
+}
+    .SearchMenu-Command-Menu-DeleteImage-Body-List-Series-Item-Checkbox input {
+        width: 24px;
+        height: 24px;
+        margin: 8px 0px 0px 8px;
+    }
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Series-Item-Border {
+    position: absolute;
+    top: 0px;
+    left: 48px;
+    width: 72px;
+    height: 72px;
+    border-radius: 5px;
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Series-Item-Content {
+    position: absolute;
+    top: 4px;
+    left: 52px;
+    width: 64px;
+    height: 64px;
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Series-Item-NowLoading {
+    position: absolute;
+    background-image: url("../img/x1/NowLoading.png?20150706a");
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Series-Item-Thumbnail {
+    position: absolute;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Series-Item-SeriesNumber {
+    position: absolute;
+    background-color: #000000;
+    max-width: 64px;
+    overflow: hidden;
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Series-Item-Select {
+    background-color: #fffe00;
+}
+#SearchMenu-Command-Menu-DeleteImage-Body-List-AllSelectSeries {
+    position: absolute;
+    top: 302px;
+    left: 7px;
+    width: 40px;
+    height: 40px;
+}
+    #SearchMenu-Command-Menu-DeleteImage-Body-List-AllSelectSeries input {
+        width: 24px;
+        height: 24px;
+        margin: 8px 0px 0px 8px;
+    }
+#SearchMenu-Command-Menu-DeleteImage-Body-List-DeleteSeries {
+    position: absolute;
+    top: 310px;
+    left: 53px;
+}
+    #SearchMenu-Command-Menu-DeleteImage-Body-List-DeleteSeries input {
+        width: 86px;
+        height: 24px;
+    }
+#SearchMenu-Command-Menu-DeleteImage-Body-List-Image {
+    position: absolute;
+    top: 0px;
+    left: 163px;
+    border: 1px solid #425d68;
+    width: 145px;
+    height: 300px;
+    overflow: auto;
+    -ms-touch-action: pan-y; /* IE10向け */
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Image-Item {
+    position: relative;
+    height: 72px;
+    margin: 3px 0px 0px 0px;
+    color: #ffffff;
+    -ms-touch-action: none; /* IE10向け */
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Image-Item-Checkbox {
+    position: absolute;
+    top: 16px;
+    left: 6px;
+    width: 40px;
+    height: 40px;
+}
+    .SearchMenu-Command-Menu-DeleteImage-Body-List-Image-Item-Checkbox input {
+        width: 24px;
+        height: 24px;
+        margin: 8px 0px 0px 8px;
+    }
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Image-Item-Border {
+    position: absolute;
+    top: 0px;
+    left: 48px;
+    width: 72px;
+    height: 72px;
+    border-radius: 5px;
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Image-Item-Content {
+    position: absolute;
+    top: 4px;
+    left: 52px;
+    width: 64px;
+    height: 64px;
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Image-Item-NowLoading {
+    position: absolute;
+    background-image: url("../img/x1/NowLoading.png?20150706a");
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Image-Item-Thumbnail {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Image-Item-InstanceNumber {
+    position: absolute;
+    background-color: #000000;
+    max-width: 64px;
+    overflow: hidden;
+}
+.SearchMenu-Command-Menu-DeleteImage-Body-List-Image-Item-Select {
+    background-color: #fffe00;
+}
+#SearchMenu-Command-Menu-DeleteImage-Body-List-AllSelectImage {
+    position: absolute;
+    top: 302px;
+    left: 170px;
+    width: 40px;
+    height: 40px;
+}
+    #SearchMenu-Command-Menu-DeleteImage-Body-List-AllSelectImage input {
+        width: 24px;
+        height: 24px;
+        margin: 8px 0px 0px 8px;
+    }
+#SearchMenu-Command-Menu-DeleteImage-Body-List-DeleteImage {
+    position: absolute;
+    top: 310px;
+    left: 216px;
+}
+    #SearchMenu-Command-Menu-DeleteImage-Body-List-DeleteImage input {
+        width: 86px;
+        height: 24px;
+    }
+#SearchMenu-Command-Menu-DeleteImage-Body-List-Message {
+    position: absolute;
+    top: 342px;
+    left: 10px;
+}
+#SearchMenu-Command-Menu-DeleteImage-Body-Image {
+    position: relative;
+    height: 100%;
+    margin: -360px 0px 0px 0px;
+}
+#SearchMenu-Command-Menu-DeleteImage-Body-Image-View {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    border: 1px solid #425d68;
+    background-color: #000000;
+    width: 256px;
+    height: 256px;
+}
+#SearchMenu-Command-Menu-DeleteImage-Body-Image-NowLoading {
+    position: absolute;
+    top: 11px;
+    left: 26px;
+    background-color: #000000;
+    width: 256px;
+    height: 256px;
+}
+#SearchMenu-Command-Menu-DeleteImage-Body-Image-Checkbox {
+    position: absolute;
+    top: 285px;
+    left: 25px;
+    width: 40px;
+    height: 40px;
+}
+    #SearchMenu-Command-Menu-DeleteImage-Body-Image-Checkbox input {
+        width: 24px;
+        height: 24px;
+        margin: 8px 0px 0px 8px;
+    }
+#SearchMenu-Command-Menu-DeleteImage-Body-Image-InstanceNumber {
+    position: absolute;
+    top: 285px;
+    left: 70px;
+    width: 110px;
+}
+#SearchMenu-Command-Menu-DeleteImage-Body-Image-Count {
+    position: absolute;
+    top: 306px;
+    left: 70px;
+}
+#SearchMenu-Command-Menu-DeleteImage-Body-Image-Prev {
+    position: absolute;
+    top: 290px;
+    left: 180px;
+}
+    #SearchMenu-Command-Menu-DeleteImage-Body-Image-Prev input {
+        width: 48px;
+        height: 28px;
+    }
+#SearchMenu-Command-Menu-DeleteImage-Body-Image-Next {
+    position: absolute;
+    top: 290px;
+    left: 235px;
+}
+    #SearchMenu-Command-Menu-DeleteImage-Body-Image-Next input {
+        width: 48px;
+        height: 28px;
+    }
+#SearchMenu-Command-Menu-DeleteImage-Body-Image-Message {
+    position: absolute;
+    top: 342px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+}
+#SearchMenu-Command-Menu-DeleteImage-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-DeleteImage-Foot-OK {
+    position: relative;
+    top: 0px;
+    left: 125px;
+    width: 80px;
+    height: 24px;
+}
+    #SearchMenu-Command-Menu-DeleteImage-Foot-OK input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* パスワード変更 */
+#SearchMenu-Command-Menu-ChangePass {
+    background-color: #7aaac0;
+    border: 1px solid #425d68;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    margin: -125px 0px 0px -120px;
+}
+#SearchMenu-Command-Menu-ChangePass-Head {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-ChangePass-Head-Title {
+    font-size: 120%;
+}
+#SearchMenu-Command-Menu-ChangePass-Body {
+    background-color: #f8f8ff;
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+}
+#SearchMenu-Command-Menu-ChangePass-Body-Present-Label,
+#SearchMenu-Command-Menu-ChangePass-Body-New-Label,
+#SearchMenu-Command-Menu-ChangePass-Body-Confirm-Label {
+    margin: 0px 0px 2px 0px;
+}
+#SearchMenu-Command-Menu-ChangePass-Body-Present-Text,
+#SearchMenu-Command-Menu-ChangePass-Body-New-Text,
+#SearchMenu-Command-Menu-ChangePass-Body-Confirm-Text {
+    margin: 0px 0px 10px 0px;
+}
+    #SearchMenu-Command-Menu-ChangePass-Body-Present-Text input,
+    #SearchMenu-Command-Menu-ChangePass-Body-New-Text input,
+    #SearchMenu-Command-Menu-ChangePass-Body-Confirm-Text input {
+        border: 1px solid #425d68;
+        width: 204px;
+        font-size: 100%;
+        padding: 2px 2px 2px 2px;
+    }
+#SearchMenu-Command-Menu-ChangePass-Body-Message {
+    color: #ff0000;
+}
+#SearchMenu-Command-Menu-ChangePass-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-ChangePass-Foot-OK {
+    position: relative;
+    top: 0px;
+    left: 30px;
+    width: 80px;
+    height: 24px;
+}
+#SearchMenu-Command-Menu-ChangePass-Foot-Cancel {
+    position: relative;
+    top: 0px;
+    left: 130px;
+    width: 80px;
+    height: 24px;
+    margin: -24px 0px 0px 0px;
+}
+    #SearchMenu-Command-Menu-ChangePass-Foot-OK input,
+    #SearchMenu-Command-Menu-ChangePass-Foot-Cancel input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* 使用容量表示 */
+#SearchMenu-Command-Menu-UsedSize {
+    background-color: #7aaac0;
+    border: 1px solid #425d68;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    margin: -55px 0px 0px -180px;
+}
+#SearchMenu-Command-Menu-UsedSize-Head {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-UsedSize-Head-Title {
+    font-size: 120%;
+}
+#SearchMenu-Command-Menu-UsedSize-Body {
+    background-color: #ffffff;
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-UsedSize-Body-Text {
+    width: 348px;
+    height: 38px;
+    line-height: 120%;
+}
+#SearchMenu-Command-Menu-UsedSize-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-UsedSize-Foot-OK {
+    position: relative;
+    top: 0px;
+    left: 135px;
+    width: 80px;
+    height: 24px;
+}
+    #SearchMenu-Command-Menu-UsedSize-Foot-OK input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* CSVフォーマット */
+#SearchMenu-Command-Menu-CsvFormat {
+    background-color: #7aaac0;
+    border: 1px solid #425d68;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 710px;
+    margin: -119px 0px 0px -355px;
+}
+#SearchMenu-Command-Menu-CsvFormat-Head {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-CsvFormat-Head-Title {
+    font-size: 120%;
+}
+#SearchMenu-Command-Menu-CsvFormat-Body {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-CsvFormat-Body-Text textarea {
+    width: 694px;
+    height: 160px;
+    padding: 2px 2px 2px 2px;
+    white-space: pre;
+}
+#SearchMenu-Command-Menu-CsvFormat-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-CsvFormat-Foot-OK {
+    position: relative;
+    top: 0px;
+    left: 310px;
+    width: 80px;
+    height: 24px;
+}
+    #SearchMenu-Command-Menu-CsvFormat-Foot-OK input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* ポータルマスタ設定 */
+#SearchMenu-Command-Menu-SetPortalMst {
+    background-color: #7aaac0;
+    border: 1px solid #425d68;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    margin: -250px 0px 0px -180px;
+}
+#SearchMenu-Command-Menu-SetPortalMst-Head {
+    margin: 5px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetPortalMst-Head-Title {
+    font-size: 120%;
+}
+#SearchMenu-Command-Menu-SetPortalMst-Body {
+    background-color: #f8f8ff;
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+}
+#SearchMenu-Command-Menu-SetPortalMst-Body-Title-Label,
+#SearchMenu-Command-Menu-SetPortalMst-Body-Column1-Label,
+#SearchMenu-Command-Menu-SetPortalMst-Body-Column2-Label,
+#SearchMenu-Command-Menu-SetPortalMst-Body-Column3-Label,
+#SearchMenu-Command-Menu-SetPortalMst-Body-Password-Label,
+#SearchMenu-Command-Menu-SetPortalMst-Body-LinkTitle-Label,
+#SearchMenu-Command-Menu-SetPortalMst-Body-LinkURL-Label {
+    margin: 0px 0px 2px 0px;
+    word-wrap: break-word;
+}
+.SearchMenu-Command-Menu-SetPortalMst-Body-Notes {
+    margin: 0px 0px 0px 10px;
+    font-size: 80%;
+    color: #666666;
+}
+#SearchMenu-Command-Menu-SetPortalMst-Body-Title-Text,
+#SearchMenu-Command-Menu-SetPortalMst-Body-Column1-Text,
+#SearchMenu-Command-Menu-SetPortalMst-Body-Column2-Text,
+#SearchMenu-Command-Menu-SetPortalMst-Body-Column3-Text,
+#SearchMenu-Command-Menu-SetPortalMst-Body-Password-Text,
+#SearchMenu-Command-Menu-SetPortalMst-Body-LinkTitle-Text {
+    margin: 0px 0px 10px 0px;
+}
+    #SearchMenu-Command-Menu-SetPortalMst-Body-Title-Text input,
+    #SearchMenu-Command-Menu-SetPortalMst-Body-Column1-Text input,
+    #SearchMenu-Command-Menu-SetPortalMst-Body-Column2-Text input,
+    #SearchMenu-Command-Menu-SetPortalMst-Body-Column3-Text input,
+    #SearchMenu-Command-Menu-SetPortalMst-Body-Password-Text input,
+    #SearchMenu-Command-Menu-SetPortalMst-Body-LinkTitle-Text input,
+    #SearchMenu-Command-Menu-SetPortalMst-Body-LinkURL-Text input {
+        border: 1px solid #425d68;
+        width: 324px;
+        font-size: 100%;
+        padding: 2px 2px 2px 2px;
+    }
+#SearchMenu-Command-Menu-SetPortalMst-Body-LinkURL-Count {
+    height: 18px;
+    margin: 2px 0px 0px 8px;
+    text-align: right;
+    font-size: 80%;
+    color: #000099;
+}
+#SearchMenu-Command-Menu-SetPortalMst-Body-Message {
+    color: #ff0000;
+}
+#SearchMenu-Command-Menu-SetPortalMst-Foot {
+    margin: 10px 5px 5px 5px;
+}
+#SearchMenu-Command-Menu-SetPortalMst-Foot-OK {
+    position: relative;
+    top: 0px;
+    left: 90px;
+    width: 80px;
+    height: 24px;
+}
+#SearchMenu-Command-Menu-SetPortalMst-Foot-Cancel {
+    position: relative;
+    top: 0px;
+    left: 190px;
+    width: 80px;
+    height: 24px;
+    margin: -24px 0px 0px 0px;
+}
+    #SearchMenu-Command-Menu-SetPortalMst-Foot-OK input,
+    #SearchMenu-Command-Menu-SetPortalMst-Foot-Cancel input {
+        width: 80px;
+        height: 24px;
+    }
+
+/* iPad向け */
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+    /*#SearchMenu-Info {
+        background-image: url("../img/x2/MenuInfo2.png?20150706a");
+    }
+
+    #SearchMenu-Basic {
+        background-image: url("../img/x2/MenuBack2.png?20150706a");
+    }
+
+    #SearchMenu-Basic-Search {
+        background-image: url("../img/x2/MenuSearch.png?20150706a");
+    }
+
+    #SearchMenu-Basic-Reset {
+        background-image: url("../img/x2/MenuReset.png?20150706a");
+    }
+
+    #SearchMenu-Command {
+        background-image: url("../img/x2/MenuBack2.png?20150706a");
+    }
+
+    #SearchMenu-Command-View-Overlay-Left {
+        background-image: url("../img/x2/OverlayA_Left.png?20150706a");
+    }
+
+    #SearchMenu-Command-View-Overlay-Right {
+        background-image: url("../img/x2/OverlayA_Right.png?20150706a");
+    }
+
+    .SearchMenu-Command-Preset {
+        background-image: url("../img/x2/MenuPreset.png?20150706a");
+    }
+
+    .SearchMenu-Command-PacsSearch-OFF {
+        background-image: url("../img/x2/PACS_off.png?20150706a");
+    }
+
+    .SearchMenu-Command-PacsSearch-ON {
+        background-image: url("../img/x2/PACS_on.png?20150706a");
+    }
+
+    .SearchMenu-Command-Menu-OFF {
+        background-image: url("../img/x2/Menu_off.png?20150706a");
+    }
+
+    .SearchMenu-Command-Menu-ON {
+        background-image: url("../img/x2/Menu_on.png?20150706a");
+    }
+
+    .SearchMenu-Command-Option-OFF {
+        background-image: url("../img/x2/Option_off.png?20150706a");
+    }
+
+    .SearchMenu-Command-Option-ON {
+        background-image: url("../img/x2/Option_on.png?20150706a");
+    }
+
+    #SearchMenu-Command-Uploader {
+        background-image: url("../img/x2/Uploader_off.png?20150706a");
+    }
+
+    #SearchMenu-Command-Portal {
+        background-image: url("../img/x2/Portal_off.png?20150706a");
+    }
+
+    #SearchMenu-Command-SearchHelp {
+        background-image: url("../img/x2/Help_off.png?20150706a");
+    }
+
+    .SearchMenu-Command-Close-Logout {
+        background-image: url("../img/x2/Logout2_off.png?20150706a");
+    }
+
+    .SearchMenu-Command-Close-Exit {
+        background-image: url("../img/x2/Close_off.png?20150706a");
+    }
+
+    #SearchMenu-Input-HospitalName-Side,
+    #SearchMenu-Input-StudyDate-Side,
+    #SearchMenu-Input-Modality-Side,
+    #SearchMenu-Input-UploadDate-Side,
+    #SearchMenu-Input-UploadDateTime-Side,
+    #SearchMenu-Input-StudyDateTime-Side,
+    #SearchMenu-Input-Keyword-Side {
+        background-image: url("../img/x2/InputSubMenu.png?20150706a");
+    }*/
+}

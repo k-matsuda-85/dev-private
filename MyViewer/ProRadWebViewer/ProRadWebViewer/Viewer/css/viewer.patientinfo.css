@@ -1,0 +1,102 @@
+﻿/* 患者情報 */
+#PatientInfo-View {
+    width: 100%;
+    table-layout: fixed;
+    background-color: #535353;
+}
+#PatientInfo-PatientID,
+#PatientInfo-PatientsName {
+    line-height: 19px;
+    cursor: move;
+    white-space: pre;
+    overflow: hidden;
+    margin: 0px 0px 0px 20px;
+    color: #e8e8e8;
+    text-decoration: underline;
+}
+
+/* ヘッダ部 */
+#PatientInfo-Head-Left {
+    cursor: move;
+    /*background-image: url("../img/x1/HeadLeft.png?20150706a");*/
+    background-color:#404040;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 24px;
+}
+#PatientInfo-Head-Center {
+    cursor: move;
+    /*background-image: url("../img/x1/HeadCenter.png?20150706a");*/
+    background-color:#404040;
+    text-align: left;
+    white-space: pre;
+    overflow: hidden;
+}
+#PatientInfo-Head-Center-Far {
+/*    background-image: url("../img/x1/HeadCenter.png?20150706a");*/
+    width: 190px;
+    background-color:#404040;
+    height: 24px;
+    white-space: pre;
+    overflow: hidden;
+}
+    #PatientInfo-Head-Center-Far a {
+        line-height: 16px;
+        cursor: move;
+        font-size: 80%;
+        text-decoration: none;
+        color: #e8e8e8;
+    }
+
+#PatientInfo-Head-Right {
+    cursor: pointer;
+    background-color:#404040;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 57px;
+    height: 24px;
+}
+.PatientInfo-Head-Right-Down-OFF {
+    /*background-image: url("../img/x1/HeadRight_down_off.png?20150706a");*/
+}
+.PatientInfo-Head-Right-Down-ON {
+/*    background-image: url("../img/x1/HeadRight_down_on.png?20150706a");*/
+}
+.PatientInfo-Head-Right-Up-OFF {
+/*    background-image: url("../img/x1/HeadRight_up_off.png?20150706a");*/
+}
+.PatientInfo-Head-Right-Up-ON {
+/*    background-image: url("../img/x1/HeadRight_up_on.png?20150706a");*/
+}
+
+/* iPad向け */
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+    /*#PatientInfo-Head-Left {
+        background-image: url("../img/x2/HeadLeft.png?20150706a");
+    }
+
+    #PatientInfo-Head-Center {
+        background-image: url("../img/x2/HeadCenter.png?20150706a");
+    }
+
+    #PatientInfo-Head-Center-Far {
+        background-image: url("../img/x2/HeadCenter.png?20150706a");
+    }
+
+    .PatientInfo-Head-Right-Down-OFF {
+        background-image: url("../img/x2/HeadRight_down_off.png?20150706a");
+    }
+
+    .PatientInfo-Head-Right-Down-ON {
+        background-image: url("../img/x2/HeadRight_down_on.png?20150706a");
+    }
+
+    .PatientInfo-Head-Right-Up-OFF {
+        background-image: url("../img/x2/HeadRight_up_off.png?20150706a");
+    }
+
+    .PatientInfo-Head-Right-Up-ON {
+        background-image: url("../img/x2/HeadRight_up_on.png?20150706a");
+    }
+}*/

@@ -1,0 +1,19 @@
+﻿/* 全体 */
+* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+body {
+    font-family: "游ゴシック";
+    overflow: hidden;
+    visibility: hidden;
+}
+html {
+    overflow: hidden;
+    -ms-touch-action: none; /* IE10向け */
+}
+textarea,
+input,
+select {
+    font-family: "游ゴシック";
+}

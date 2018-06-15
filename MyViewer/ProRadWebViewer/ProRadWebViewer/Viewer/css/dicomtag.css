@@ -1,0 +1,58 @@
+﻿/* 全体 */
+* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+body {
+    font-family: "游ゴシック";
+    background-color: #7aaac0;
+    overflow: hidden;
+    visibility: hidden;
+}
+html {
+    overflow: hidden;
+    -ms-touch-action: none; /* IE10向け */
+    -ms-content-zooming: none; /* IE10向け */
+}
+
+/* DicomTag一覧 */
+#DicomTagList {
+    background-color: #7aaac0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+/* ヘッダ部 */
+.DicomTagList-Head {
+    text-align: left;
+    color: #e8e8e8;
+    cursor: default;
+    overflow: hidden;
+    background-color: #658d9e;
+    border-bottom: 1px solid #425d68;
+    border-right: 1px solid #425d68;
+    vertical-align: bottom;
+    height: 24px;
+}
+
+/* ボディ部 */
+.DicomTagList-Body-Group,
+.DicomTagList-Body-Element,
+.DicomTagList-Body-EName,
+.DicomTagList-Body-JName,
+.DicomTagList-Body-VR,
+.DicomTagList-Body-Length,
+.DicomTagList-Body-Value {
+    white-space: pre;
+    padding: 0px 10px 0px 10px;
+}
+
+/* アイテム部 */
+.DicomTagList-Item {
+    cursor: default;
+    border-bottom: 1px solid #425d68;
+    border-right: 1px solid #425d68;
+    overflow: hidden;
+    height: 28px;
+}

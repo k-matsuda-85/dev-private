@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ProRadServiceLib" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ProRadServiceLib" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.16.7.100/ProRadServiceOnPre/OnPreService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfAnnotationItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnnotationItem" nillable="true" type="tns:AnnotationItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnnotationItem" nillable="true" type="tns:ArrayOfAnnotationItem" />
+  <xs:complexType name="AnnotationItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FontSize" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FontStyle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Format" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Position" type="xs:int" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnnotationItem" nillable="true" type="tns:AnnotationItem" />
+  <xs:complexType name="ArrayOfMGroupItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MGroupItem" nillable="true" type="tns:MGroupItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMGroupItem" nillable="true" type="tns:ArrayOfMGroupItem" />
+  <xs:complexType name="MGroupItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MGroupItem" nillable="true" type="tns:MGroupItem" />
+  <xs:simpleType name="DbActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Insert" />
+      <xs:enumeration value="Update" />
+      <xs:enumeration value="Delete" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DbActionType" nillable="true" type="tns:DbActionType" />
+  <xs:complexType name="ArrayOfMUserItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MUserItem" nillable="true" type="tns:MUserItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMUserItem" nillable="true" type="tns:ArrayOfMUserItem" />
+  <xs:complexType name="MUserItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvalidFlag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAdmin" type="xs:int" />
+      <xs:element minOccurs="0" name="LastLoginDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LockoutFlag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LoginID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoginPW" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MUserItem" nillable="true" type="tns:MUserItem" />
+  <xs:complexType name="ArrayOfMStorageItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MStorageItem" nillable="true" type="tns:MStorageItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMStorageItem" nillable="true" type="tns:ArrayOfMStorageItem" />
+  <xs:complexType name="MStorageItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DicomPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogonPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogonUsername" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element minOccurs="0" name="StorageID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MStorageItem" nillable="true" type="tns:MStorageItem" />
+  <xs:complexType name="RSKey">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNo" type="xs:int" />
+      <xs:element minOccurs="0" name="StudyDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserCD" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RSKey" nillable="true" type="tns:RSKey" />
+  <xs:complexType name="FindParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessionNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsPacsSearch" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Keyword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyDateFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyDateTo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindParam" nillable="true" type="tns:FindParam" />
+  <xs:complexType name="ArrayOfStudyTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StudyTag" nillable="true" type="tns:StudyTag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStudyTag" nillable="true" type="tns:ArrayOfStudyTag" />
+  <xs:complexType name="StudyTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessionNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BodyPartExamined" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Keyword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberOfImages" type="xs:int" />
+      <xs:element minOccurs="0" name="PatientAge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientBirthDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientSex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyMemoUmu" type="xs:int" />
+      <xs:element minOccurs="0" name="StudyTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StudyTag" nillable="true" type="tns:StudyTag" />
+  <xs:complexType name="ArrayOfSeriesTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeriesTag" nillable="true" type="tns:SeriesTag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeriesTag" nillable="true" type="tns:ArrayOfSeriesTag" />
+  <xs:complexType name="SeriesTag">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ImageKeys" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="IsGSPS" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberOfFrames" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberOfImages" type="xs:int" />
+      <xs:element minOccurs="0" name="SeriesDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeriesKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeriesNumber" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeriesTag" nillable="true" type="tns:SeriesTag" />
+  <xs:complexType name="ArrayOfImageTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImageTag" nillable="true" type="tns:ImageTag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImageTag" nillable="true" type="tns:ArrayOfImageTag" />
+  <xs:complexType name="ImageTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Columns" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageOrientationPatient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImagePositionPatient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstanceNumber" type="xs:long" />
+      <xs:element minOccurs="0" name="IsImageInfo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PixelSpacing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rows" type="xs:int" />
+      <xs:element minOccurs="0" name="SliceLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SliceThickness" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WindowCenter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WindowWidth" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImageTag" nillable="true" type="tns:ImageTag" />
+  <xs:complexType name="StudyMemoItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Memo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MemoDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StudyMemoItem" nillable="true" type="tns:StudyMemoItem" />
+  <xs:complexType name="ArrayOfStudyMemoItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StudyMemoItem" nillable="true" type="tns:StudyMemoItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStudyMemoItem" nillable="true" type="tns:ArrayOfStudyMemoItem" />
+  <xs:complexType name="ArrayOfDicomTagItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DicomTagItem" nillable="true" type="tns:DicomTagItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDicomTagItem" nillable="true" type="tns:ArrayOfDicomTagItem" />
+  <xs:complexType name="DicomTagItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataSize" type="xs:int" />
+      <xs:element minOccurs="0" name="EName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tag" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="VR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DicomTagItem" nillable="true" type="tns:DicomTagItem" />
+  <xs:complexType name="RoiItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Area" type="xs:double" />
+      <xs:element minOccurs="0" name="Average" type="xs:double" />
+      <xs:element minOccurs="0" name="Maximum" type="xs:double" />
+      <xs:element minOccurs="0" name="Minimum" type="xs:double" />
+      <xs:element minOccurs="0" name="StandardDeviation" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoiItem" nillable="true" type="tns:RoiItem" />
+  <xs:complexType name="ArrayOfGSPSItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GSPSItem" nillable="true" type="tns:GSPSItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGSPSItem" nillable="true" type="tns:ArrayOfGSPSItem" />
+  <xs:complexType name="GSPSItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentCreatorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GSPSKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentationCreationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentationCreationTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GSPSItem" nillable="true" type="tns:GSPSItem" />
+  <xs:complexType name="GSPSDataItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Flip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rotate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VoiLut" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GSPSDataItem" nillable="true" type="tns:GSPSDataItem" />
+</xs:schema>

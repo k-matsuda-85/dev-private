@@ -1,0 +1,301 @@
+﻿/* 検査一覧 */
+#StudyList {
+    /*background-color: #7aaac0;*/
+    position: relative;
+    overflow: hidden;
+}
+#StudyList-View {
+    width: 100%;
+    table-layout: fixed;
+    height:35px;
+}
+#StudyListLoading {
+    /*background-image: url("../img/x1/Loding.gif?20150706a");*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    width: 160px;
+    height: 44px;
+    margin-left: -80px;
+    margin-top: -22px;
+}
+
+/* ヘッダ部 */
+#StudyList-Head-Left {
+    /*background-image: url("../img/x1/HeadLeft.png?20150706a");*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 24px;
+    background-color:#F8F9FB;
+}
+.StudyList-Head-Center {
+    cursor: default;
+    overflow: hidden;
+    /*background-image: url("../img/x1/HeadCenter.png?20150706a");*/
+    /*vertical-align: bottom;*/
+    height: 24px;
+    text-align:center;
+    color:#B6B7B9;
+    background-color:#F8F9FB;
+}
+#StudyList-Head-Right-Margin {
+    color: #e8e8e8;
+    cursor: default;
+    overflow: hidden;
+    /*background-image: url("../img/x1/HeadCenter.png?20150706a");*/
+    vertical-align: bottom;
+    height: 24px;
+    width: 100%;
+    background-color:#F8F9FB;
+}
+.StudyList-Head-Center span {
+    font-size: 70%;
+    position: relative;
+    bottom: 2px;
+}
+#StudyList-Head-Right {
+    cursor: default;
+    /*background-image: url("../img/x1/HeadRight.png?20150706a");*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 6px;
+    background-color:#444444;
+}
+
+/* フッタ部 */
+#StudyList-Foot {
+    border-left: 1px solid #425d68;
+    border-right: 1px solid #425d68;
+    height: 17px;
+}
+
+/* ボディ部 */
+.StudyList-Body-Left {
+    background-color:#F8F9FB;
+    width: 6px;
+}
+.StudyList-Body-Left-Margin {
+    width: 2px;
+}
+.StudyList-Body-Right-Margin {
+    width: 20px;
+}
+.StudyList-Body-Margin {
+    width: 100%;
+}
+.StudyList-Body-HospitalName,
+.StudyList-Body-StudyDate,
+.StudyList-Body-UploadDate {
+    white-space: pre;
+    width: 135px;
+    min-width: 90px;
+}
+.StudyList-Body-PatientID {
+    white-space: pre;
+    width: 170px;
+    min-width: 90px;
+}
+.StudyList-Body-PatientsName {
+    white-space: pre;
+    width: 220px;
+    min-width: 70px;
+}
+.StudyList-Body-Modality {
+    white-space: pre;
+    width: 80px;
+    min-width: 55px;
+}
+.StudyList-Body-PatientsSex,
+.StudyList-Body-PatientsAge {
+    white-space: pre;
+    width: 55px;
+    min-width: 55px;
+}
+.StudyList-Body-BodyPartExamined {
+    white-space: pre;
+    width: 110px;
+    min-width: 55px;
+}
+.StudyList-Body-NumberOfImages {
+    white-space: pre;
+    width: 70px;
+    min-width: 70px;
+}
+.StudyList-Body-AccessionNumber {
+    white-space: pre;
+    width: 110px;
+    min-width: 90px;
+}
+.StudyList-Body-PatientsBirthDate,
+.StudyList-Body-StudyTime {
+    white-space: pre;
+    width: 95px;
+    min-width: 90px;
+}
+.StudyList-Body-StudyDescription {
+    white-space: pre;
+    width: 240px;
+    min-width: 70px;
+}
+.StudyList-Body-StudyDateTime,
+.StudyList-Body-UploadDateTime {
+    white-space: pre;
+    width: 180px;
+    min-width: 90px;
+}
+.StudyList-Body-Keyword {
+    white-space: pre;
+    width: 220px;
+    min-width: 55px;
+}
+.StudyList-Body-Comment {
+    white-space: pre;
+    width: 220px;
+    min-width: 55px;
+}
+.StudyList-Body-Memo {
+    width: 24px;
+}
+.StudyList-Body-Memo-ON {
+    /*background-image: url("../img/x1/MemoIcon_off.png?20150706a");*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 75%;
+}
+.StudyList-Body-StudyPassword {
+    width: 24px;
+}
+.StudyList-Body-StudyPassword-ON {
+    /*background-image: url("../img/x1/StudyPassword.png?20150706a");*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 75%;
+}
+.StudyList-Body-Portal {
+    width: 24px;
+}
+.StudyList-Body-Portal-ON {
+    /*background-image: url("../img/x1/Portal.png?20150706a");*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 75%;
+}
+.StudyList-Body-ShortURL {
+    width: 24px;
+}
+.StudyList-Body-ShortURL-ON {
+    /*background-image: url("../img/x1/ShortURL.png?20150706a");*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 75%;
+}
+#StudyList-Table {
+    background-color:#F8F9FB;
+    height: 136px;
+    position: relative;
+    overflow: auto;
+    font-size: 110%;
+    -ms-touch-action: pan-x pan-y; /* IE10向け */
+    -ms-scroll-chaining: none; /* IE10向け */
+}
+#StudyList-Table-View {
+    width: 100%;
+    table-layout: fixed;
+}
+#StudyList-Table-Foot {
+    height: 17px;
+}
+
+/* アイテム部 */
+.StudyList-Table-Row-Select {
+    /*color: #E4490B;*/
+    /*background-color: #333333;*/
+}
+.StudyList-Item {
+    text-align: center;
+    cursor: default;
+    border-bottom: 1px solid #425d68;
+    vertical-align: bottom;
+    overflow: hidden;
+    height: 28px;
+}
+    .StudyList-Item span {
+        white-space: nowrap;
+    }
+.StudyList-Item-Margin {
+    width: 100%;
+}
+
+#StudyList-Table-View tbody tr td {
+    border-top-color:#F8F9FB;
+    border-top-width:5px;
+    border-top-style:solid;
+    border-bottom-color:#F8F9FB;
+    border-bottom-width:5px;
+    border-bottom-style:solid;
+}
+#StudyList-Table-View tbody tr td:not(.StudyList-Body-Left):not(.StudyList-Body-Margin) span {
+    width:100%;
+    display:inline-block;
+    height:30px;
+    padding-top:5px;
+    border-top:1px solid #E7E7E9;
+    border-bottom:1px solid #E7E7E9;
+}
+
+#StudyList-Table-View tbody tr td.StudyList-Body-Margin span {
+    border-left:1px solid #E7E7E9;
+    width:100%;
+    height:30px;
+    display:inline-block;
+}
+#StudyList-Table-View tbody tr td.StudyList-Body-Left span {
+    border-right:1px solid #E7E7E9;
+    width:100%;
+    height:30px;
+    display:inline-block;
+}
+#StudyList-Table-View tbody tr td:not(.StudyList-Body-Left):not(.StudyList-Body-Margin) {
+    background-color:#FFFFFF;
+}
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+    /*#StudyListLoading {
+        background-image: url("../img/x2/Loding.gif?20150706a");
+    }
+
+    #StudyList-Head-Left {
+        background-image: url("../img/x2/HeadLeft.png?20150706a");
+    }
+
+    .StudyList-Head-Center {
+        background-image: url("../img/x2/HeadCenter.png?20150706a");
+    }
+
+    #StudyList-Head-Right-Margin {
+        background-image: url("../img/x2/HeadCenter.png?20150706a");
+    }
+
+    #StudyList-Head-Right {
+        background-image: url("../img/x2/HeadRight.png?20150706a");
+    }
+
+    .StudyList-Body-Memo-ON {
+        background-image: url("../img/x2/MemoIcon_off.png?20150706a");
+    }
+
+    .StudyList-Body-StudyPassword-ON {
+        background-image: url("../img/x2/StudyPassword.png?20150706a");
+    }
+
+    .StudyList-Body-Portal-ON {
+        background-image: url("../img/x2/Portal.png?20150706a");
+    }
+
+    .StudyList-Body-ShortURL-ON {
+        background-image: url("../img/x2/ShortURL.png?20150706a");
+    }*/
+}

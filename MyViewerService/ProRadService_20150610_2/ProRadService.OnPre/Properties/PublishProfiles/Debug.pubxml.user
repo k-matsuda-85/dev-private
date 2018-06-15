@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+このファイルは、Web プロジェクトの発行/パッケージ処理で使用されます。この MSBuild ファイルを編集することによって、
+この処理の動作をカスタマイズできます。詳細については、http://go.microsoft.com/fwlink/?LinkID=208121 を参照してください。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Work\ProRadViewerNadia\ProRadService\www_Debug\ProRadServiceOnPre</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/CustomConfig.dll">
+      <publishTime>10/03/2013 20:17:17</publishTime>
+    </File>
+    <File Include="bin/CustomLog.dll">
+      <publishTime>07/01/2011 16:50:08</publishTime>
+    </File>
+    <File Include="bin/DcmtkCtrl.dll">
+      <publishTime>11/04/2009 18:54:06</publishTime>
+    </File>
+    <File Include="bin/DcmUtil.dll">
+      <publishTime>03/04/2014 11:48:37</publishTime>
+    </File>
+    <File Include="bin/DicomAnalyzer3.dll">
+      <publishTime>09/04/2014 11:16:38</publishTime>
+    </File>
+    <File Include="bin/DicomSplitter.dll">
+      <publishTime>02/22/2012 12:04:47</publishTime>
+    </File>
+    <File Include="bin/ProRadService.OnPre.dll">
+      <publishTime>01/14/2015 18:33:14</publishTime>
+    </File>
+    <File Include="bin/ProRadService.OnPre.pdb">
+      <publishTime>01/14/2015 18:33:14</publishTime>
+    </File>
+    <File Include="bin/ProRadServiceLib.dll">
+      <publishTime>01/14/2015 18:33:14</publishTime>
+    </File>
+    <File Include="bin/ProRadServiceLib.pdb">
+      <publishTime>01/14/2015 18:33:14</publishTime>
+    </File>
+    <File Include="bin/protobuf-net.dll">
+      <publishTime>09/30/2013 09:20:36</publishTime>
+    </File>
+    <File Include="bin/TryDb.dll">
+      <publishTime>09/15/2010 14:27:31</publishTime>
+    </File>
+    <File Include="bin/YCom.dll">
+      <publishTime>10/21/2009 16:04:02</publishTime>
+    </File>
+    <File Include="OnPreService.svc">
+      <publishTime>12/10/2014 14:10:18</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/14/2015 18:27:22</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

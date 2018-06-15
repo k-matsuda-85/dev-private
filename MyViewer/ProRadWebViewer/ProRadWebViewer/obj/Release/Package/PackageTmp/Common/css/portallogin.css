@@ -1,0 +1,54 @@
+﻿/* 全体 */
+* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+body {
+    font-family: "游ゴシック";
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+html {
+    overflow: hidden;
+    -ms-touch-action: none; /* IE10向け */
+}
+
+/* 入力部 */
+#Login {
+    width: 195px;
+    height: 140px;
+    margin-left: 2px;
+}
+#LabelID,
+#LabelPassword {
+    height: 20px;
+    font-size: 100%;
+}
+#ID {
+    width: 150px;
+}
+    #ID input {
+        width: 100%;
+        font-size: 100%;
+    }
+#Password {
+    width: 150px;
+}
+    #Password input {
+        width: 100%;
+        font-size: 100%;
+    }
+#Button {
+    margin-top: 20px;
+}
+#LoginButton {
+    width: 83px;
+    height: 23px;
+}
+#ClearButton {
+    width: 83px;
+    height: 23px;
+    margin-left: 18px;
+}

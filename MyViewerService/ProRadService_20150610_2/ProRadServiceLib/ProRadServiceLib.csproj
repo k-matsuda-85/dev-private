@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E6A55A8-FCE6-4FE6-9251-E752359734A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProRadServiceLib</RootNamespace>
+    <AssemblyName>ProRadServiceLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CustomLog">
+      <HintPath>..\DLL\CustomLog.dll</HintPath>
+    </Reference>
+    <Reference Include="DcmtkCtrl">
+      <HintPath>..\DLL\DcmtkCtrl.dll</HintPath>
+    </Reference>
+    <Reference Include="DcmUtil">
+      <HintPath>..\DLL\DcmUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="DicomAnalyzer3">
+      <HintPath>..\DLL\DicomAnalyzer3.dll</HintPath>
+    </Reference>
+    <Reference Include="DicomSplitter">
+      <HintPath>..\DLL\DicomSplitter.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\DLL\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TryDb">
+      <HintPath>..\DLL\TryDb.dll</HintPath>
+    </Reference>
+    <Reference Include="YCom">
+      <HintPath>..\DLL\YCom.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppUtil.cs" />
+    <Compile Include="ConvertUtil.cs" />
+    <Compile Include="CryptoUtil.cs" />
+    <Compile Include="DbCacheUtil.cs" />
+    <Compile Include="DbType\DCM\DCM.cs" />
+    <Compile Include="DbType\DCM\DCM_I.cs" />
+    <Compile Include="DbType\DCM\DCM_T.cs" />
+    <Compile Include="DbType\EXP\EXP.cs" />
+    <Compile Include="DbType\EXP\EXP_M.cs" />
+    <Compile Include="DbType\LCL\LCL.cs" />
+    <Compile Include="DbType\LCL\LCL_I.cs" />
+    <Compile Include="DbType\LCL\LCL_M.cs" />
+    <Compile Include="DbType\LCL\LCL_T1.cs" />
+    <Compile Include="DbType\LCL\LCL_T2.cs" />
+    <Compile Include="DbType\RS\RS.cs" />
+    <Compile Include="DbType\RS\RS_T.cs" />
+    <Compile Include="DbType\YCOM\YCOM.cs" />
+    <Compile Include="DbType\YCOM\YCOM_T.cs" />
+    <Compile Include="DbUtil.cs" />
+    <Compile Include="DebugLog.cs" />
+    <Compile Include="DicomUtil.cs" />
+    <Compile Include="Enum\DbActionType.cs" />
+    <Compile Include="Enum\KeyType.cs" />
+    <Compile Include="Enum\QueueStatus.cs" />
+    <Compile Include="Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="FileUtil.cs" />
+    <Compile Include="IComparer\ImageTagComparer.cs" />
+    <Compile Include="IComparer\SeriesTagComparer.cs" />
+    <Compile Include="IComparer\StudyTagComparer.cs" />
+    <Compile Include="ImageCache.cs" />
+    <Compile Include="ImageUtil.cs" />
+    <Compile Include="Impersonate.cs" />
+    <Compile Include="LockUtil.cs" />
+    <Compile Include="Param\GSPSDataItem.cs" />
+    <Compile Include="Param\GSPSItem.cs" />
+    <Compile Include="Param\GSPSKey.cs" />
+    <Compile Include="Param\LoginItem.cs" />
+    <Compile Include="LogUtil.cs" />
+    <Compile Include="ObfuscationSettings.cs" />
+    <Compile Include="PacsComm.cs" />
+    <Compile Include="Param\AnnotationItem.cs" />
+    <Compile Include="Param\DicomTagItem.cs" />
+    <Compile Include="Param\FindParam.cs" />
+    <Compile Include="Param\ImageKey.cs" />
+    <Compile Include="Param\ImageTag.cs" />
+    <Compile Include="Param\MGroupItem.cs" />
+    <Compile Include="Param\MStorageItem.cs" />
+    <Compile Include="Param\MUserItem.cs" />
+    <Compile Include="Param\RoiItem.cs" />
+    <Compile Include="Param\RSKey.cs" />
+    <Compile Include="Param\SeriesKey.cs" />
+    <Compile Include="Param\SeriesTag.cs" />
+    <Compile Include="Param\StorageItem.cs" />
+    <Compile Include="Param\StudyKey.cs" />
+    <Compile Include="Param\StudyMemoItem.cs" />
+    <Compile Include="Param\StudyTag.cs" />
+    <Compile Include="AnalyzerPR.cs" />
+    <Compile Include="Param\YcomStoreServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProRadService.cs" />
+    <Compile Include="TraceCapture.cs" />
+    <Compile Include="YcomUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Offline.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if defined EAZFUSCATOR_NET_HOME (if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 4.6) else (echo Eazfuscator.NET obfuscator is not installed on this machine. Obfuscation will be skipped.)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

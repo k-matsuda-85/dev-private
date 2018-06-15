@@ -1,0 +1,214 @@
+﻿/* 検査メモ */
+.StudyMemo-Status-Edit {
+    background-color: #fef4f4;
+}
+#StudyMemo-Margin {
+    position: relative;
+    margin: 0px 8px 0px 8px;
+}
+#StudyMemo-StudyInfo {
+    position: relative;
+    overflow: hidden;
+    height: 32px;
+    line-height: 32px;
+}
+#StudyMemo-StudyInfo-Showing {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    cursor: default;
+}
+#StudyMemo-StudyInfo-StudyDate {
+    position: absolute;
+    top: 0px;
+    left: 24px;
+    cursor: default;
+}
+#StudyMemo-StudyInfo-Modality {
+    position: absolute;
+    top: 0px;
+    left: 112px;
+    font-size: 120%;
+    cursor: default;
+}
+#StudyMemo-Button {
+    position: relative;
+    height: 32px;
+}
+.StudyMemo-Button-Common {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 48px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+}
+#StudyMemo-Button-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.StudyMemo-Button-Edit-OFF {
+    background-image: url("../img/x1/MemoEdit_off.png?20150706a");
+}
+.StudyMemo-Button-Edit-ON {
+    background-image: url("../img/x1/MemoEdit_on.png?20150706a");
+}
+.StudyMemo-Button-Register-OFF {
+    background-image: url("../img/x1/MemoRegister_off.png?20150706a");
+}
+.StudyMemo-Button-Register-ON {
+    background-image: url("../img/x1/MemoRegister_on.png?20150706a");
+}
+.StudyMemo-Button-Back-OFF {
+    background-image: url("../img/x1/MemoBack_off.png?20150706a");
+}
+.StudyMemo-Button-Back-ON {
+    background-image: url("../img/x1/MemoBack_on.png?20150706a");
+}
+#StudyMemo-Button-2 {
+    position: absolute;
+    top: 0px;
+    left: 64px;
+}
+.StudyMemo-Button-Delete-OFF {
+    background-image: url("../img/x1/MemoDelete_off.png?20150706a");
+}
+.StudyMemo-Button-Delete-ON {
+    background-image: url("../img/x1/MemoDelete_on.png?20150706a");
+}
+.StudyMemo-Button-Cancel-OFF {
+    background-image: url("../img/x1/MemoCancel_off.png?20150706a");
+}
+.StudyMemo-Button-Cancel-ON {
+    background-image: url("../img/x1/MemoCancel_on.png?20150706a");
+}
+.StudyMemo-Button-Copy-OFF {
+    background-image: url("../img/x1/MemoCopy_off.png?20150706a");
+}
+.StudyMemo-Button-Copy-ON {
+    background-image: url("../img/x1/MemoCopy_on.png?20150706a");
+}
+#StudyMemo-Button-3 {
+    position: absolute;
+    top: 38px;
+    right: 0px;
+}
+.StudyMemo-Button-History-OFF {
+    background-image: url("../img/x1/MemoHistory_off.png?20150706a");
+}
+.StudyMemo-Button-History-ON {
+    background-image: url("../img/x1/MemoHistory_on.png?20150706a");
+}
+#StudyMemo-Button-Close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+}
+.StudyMemo-Button-Close-OFF {
+    background-image: url("../img/x1/MemoClose_off.png?20150706a");
+}
+.StudyMemo-Button-Close-ON {
+    background-image: url("../img/x1/MemoClose_on.png?20150706a");
+}
+#StudyMemo-RegUserName {
+    margin: 8px 0px 0px 0px;
+    height: 16px;
+    cursor: default;
+    font-size: 80%;
+}
+#StudyMemo-RegMemoDate {
+    margin: 0px 0px 4px 0px;
+    height: 16px;
+    cursor: default;
+    font-size: 80%;
+}
+#StudyMemo-Text {
+    margin: 0px 0px 18px 0px;
+    border-width: 1px;
+}
+.StudyMemo-Text-Normal {
+    background-color: #aebece;
+}
+.StudyMemo-Text-Edit {
+    background-color: #ffffff;
+}
+
+/* iPad向け */
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+    /*.StudyMemo-Button-Edit-OFF {
+        background-image: url("../img/x2/MemoEdit_off.png?20150706a");
+    }
+
+    .StudyMemo-Button-Edit-ON {
+        background-image: url("../img/x2/MemoEdit_on.png?20150706a");
+    }
+
+    .StudyMemo-Button-Register-OFF {
+        background-image: url("../img/x2/MemoRegister_off.png?20150706a");
+    }
+
+    .StudyMemo-Button-Register-ON {
+        background-image: url("../img/x2/MemoRegister_on.png?20150706a");
+    }
+
+    .StudyMemo-Button-Back-OFF {
+        background-image: url("../img/x2/MemoBack_off.png?20150706a");
+    }
+
+    .StudyMemo-Button-Back-ON {
+        background-image: url("../img/x2/MemoBack_on.png?20150706a");
+    }
+
+    .StudyMemo-Button-Delete-OFF {
+        background-image: url("../img/x2/MemoDelete_off.png?20150706a");
+    }
+
+    .StudyMemo-Button-Delete-ON {
+        background-image: url("../img/x2/MemoDelete_on.png?20150706a");
+    }
+
+    .StudyMemo-Button-Cancel-OFF {
+        background-image: url("../img/x2/MemoCancel_off.png?20150706a");
+    }
+
+    .StudyMemo-Button-Cancel-ON {
+        background-image: url("../img/x2/MemoCancel_on.png?20150706a");
+    }
+
+    .StudyMemo-Button-Copy-OFF {
+        background-image: url("../img/x2/MemoCopy_off.png?20150706a");
+    }
+
+    .StudyMemo-Button-Copy-ON {
+        background-image: url("../img/x2/MemoCopy_on.png?20150706a");
+    }
+
+    .StudyMemo-Button-History-OFF {
+        background-image: url("../img/x2/MemoHistory_off.png?20150706a");
+    }
+
+    .StudyMemo-Button-History-ON {
+        background-image: url("../img/x2/MemoHistory_on.png?20150706a");
+    }
+
+    .StudyMemo-Button-Close-OFF {
+        background-image: url("../img/x2/MemoClose_off.png?20150706a");
+    }
+
+    .StudyMemo-Button-Close-ON {
+        background-image: url("../img/x2/MemoClose_on.png?20150706a");
+    }*/
+}

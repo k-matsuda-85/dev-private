@@ -1,0 +1,184 @@
+﻿/* シリーズ一覧 */
+#SeriesList {
+    background-color: #303136;
+}
+#SeriesList-View {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* ヘッダ部 */
+#SeriesList-Head-Left {
+    cursor: n-resize;
+    /*background-image: url("../img/x1/HeadLeft.png?20150706a");*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 24px;
+    background-color:#1F2024;
+}
+#SeriesList-Head-Center {
+    cursor: n-resize;
+    /*background-image: url("../img/x1/HeadCenter.png?20150706a");*/
+    text-align: left;
+    background-color:#1F2024;
+}
+#SeriesList-Head-Center-Far {
+    cursor: n-resize;
+    /*background-image: url("../img/x1/HeadCenter.png?20150706a");*/
+    text-align: right;
+    background-color:#1F2024;
+    color:#E4490B;
+}
+
+#SeriesList-Head-Center-Far span{
+    color:#E4490B;
+}
+
+#SeriesList-Head-Right {
+    cursor: pointer;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 57px;
+    height: 24px;
+}
+.SeriesList-Head-Right-Down-OFF {
+    /*background-image: url("../img/x1/HeadRight_down_off.png?20150706a");*/
+    background-color:#1F2024;
+}
+.SeriesList-Head-Right-Down-ON {
+    /*background-image: url("../img/x1/HeadRight_down_on.png?20150706a");*/
+    background-color:#333333;
+}
+.SeriesList-Head-Right-Up-OFF {
+    /*background-image: url("../img/x1/HeadRight_up_off.png?20150706a");*/
+    background-color:#444444;
+}
+.SeriesList-Head-Right-Up-ON {
+    /*background-image: url("../img/x1/HeadRight_up_on.png?20150706a");*/
+    background-color:#333333;
+}
+
+/* ボディ部 */
+#SeriesList-Body {
+    border-left: 1px solid #1F2024;
+    border-right: 1px solid #1F2024;
+}
+#SeriesList-Body-View {
+    position: relative;
+    height: 136px;
+    overflow: auto;
+    -ms-touch-action: pan-y; /* IE10向け */
+}
+
+/* アイテム部 */
+.SeriesList-Item {
+    position: relative;
+    cursor: pointer;
+    float: left;
+    margin: 5px 0px 0px 10px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    background-color:#393A3E
+}
+.SeriesList-Item-OFF {
+    /*background-image: url("../img/x1/SeriesItem_off.png?20150706a");*/
+    color: #838488;
+}
+.SeriesList-Item-NowLoading {
+    background-image: url("../img/x1/NowLoading.png?20150706a");
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    margin: 9px 0px 0px 28px;
+}
+.SeriesList-Item-Thumbnail {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    border:5px solid #000000;
+    margin: -75px 0px 0px 18px;
+    background-color:#000000;
+
+}
+.SeriesList-Item-NumberOf {
+    width: 116px;
+    height: 15px;
+    font-size: 80%;
+    text-align: center;
+    overflow: hidden;
+}
+.SeriesList-Item-SeriesDescription {
+    width: 116px;
+    height: 24px;
+    font-size: 80%;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.SeriesList-Item-SeriesNumber {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    max-width: 106px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 100%;
+    overflow: hidden;
+}
+.SeriesList-Item-IsGSPS {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-color: #000000;
+    color: #ffff00;
+    font-size: 100%;
+    overflow: hidden;
+}
+
+/* iPad向け */
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+    /*#SeriesList-Head-Left {
+        background-image: url("../img/x2/HeadLeft.png?20150706a");
+    }
+
+    #SeriesList-Head-Center {
+        background-image: url("../img/x2/HeadCenter.png?20150706a");
+    }
+
+    #SeriesList-Head-Center-Far {
+        background-image: url("../img/x2/HeadCenter.png?20150706a");
+    }
+
+    .SeriesList-Head-Right-Down-OFF {
+        background-image: url("../img/x2/HeadRight_down_off.png?20150706a");
+    }
+
+    .SeriesList-Head-Right-Down-ON {
+        background-image: url("../img/x2/HeadRight_down_on.png?20150706a");
+    }
+
+    .SeriesList-Head-Right-Up-OFF {
+        background-image: url("../img/x2/HeadRight_up_off.png?20150706a");
+    }
+
+    .SeriesList-Head-Right-Up-ON {
+        background-image: url("../img/x2/HeadRight_up_on.png?20150706a");
+    }
+
+    .SeriesList-Item-OFF {
+        background-image: url("../img/x2/SeriesItem_off.png?20150706a");
+    }
+
+    .SeriesList-Item-NowLoading {
+        background-image: url("../img/x2/NowLoading.png?20150706a");
+    }*/
+}
